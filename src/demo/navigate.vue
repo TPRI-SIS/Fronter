@@ -3,10 +3,12 @@
   
     <div class="navigate">
 
-    <gesture style="height:300px"></gesture>
+    <div class="header">
+       <p class="title">华能集团实时监管系统</p>
+    </div>
       
-    <div class="content">
-       <img src="./asset/bg.png">
+    <div v-bind:style='contentStyle' class="content">
+
     </div>
       <scroll v-bind:options="scroll">
         <div v-bind:style="menuStyle">
@@ -18,22 +20,19 @@
               <span class="mu-icon material-icons icon" @click="openOrCloseSubMenu(index)">menu</span>
             
             </div>
-            <transition name="slide-fade">
               <div v-show="!item.showSubMenu" @click="openOrCloseSubMenu(index)">
                 <i class="material-icons md-48 menuItemIcon">face</i>
                 <p class="menuItemTitle">{{item.name}}</p>
               </div>
-             
-            </transition>
-             <div class="subMenu" v-show="item.showSubMenu">
 
+             <div class="subMenu" v-show="item.showSubMenu">
               <mu-list>
                 <mu-list-item v-for="subItem in item.subAppList" :title="subItem.name" :to="subItem.router">
                   <mu-icon  class="icon" slot="right" value="label" />
                 </mu-list-item>
               </mu-list>
             </div>
-         
+
           </div>
      
         </div>
@@ -54,11 +53,14 @@ export default {
       subTitle: 'b',
       list: model.appList,
       menuStyle: {
-        width: model.appList.length * 205 + 'px',
+        width: model.appList.length * 205 +model.appList.length+ 'px',
         height: '205px',
         position: 'fixed',
         bottom: 0,
         left: 0
+      },
+      contentStyle:{
+         height:this.$screen.height-45+'px'
       },
       scroll:{
                 mouseWheel: false,
@@ -115,8 +117,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.titleLeft {
-  text-align: left !important;
+.title{
+  font-size: 16px;
+  margin-top:12px;
+  float: left;
+    color:white!important;
 }
 
 .center {
@@ -124,12 +129,15 @@ export default {
 }
 
 .header {
-  height: 32px;
+  height: 45px;
+  position:fixed;
+  top:0px;
+  left:0px;
 }
 
-.content {
-  height: 800px;
-  background-color: red;
+.content{
+  background-image: url('./asset/bg.png');
+  margin-top:45px;
 }
 
 .footer {
@@ -143,6 +151,7 @@ export default {
   height: 205px;
   width: 205px;
   background-color: #272E38;
+  margin-left:1px;
 }
 
 .icon {
@@ -187,29 +196,16 @@ h2 {
   color: white;
 }
 
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-
-.slide-fade-leave-active {
-  transition: all .3s ease;
-}
-
-.slide-fade-enter,
-.slide-fade-leave-active {
-  transform: scale(0,0);
-  opacity: 0;
-}
 
 .select-active{
   transition: all .3s ease;
-  
 }
 
 .select-active{
    transform: translateY(-24px);
-background-color: #1976D2;
-box-shadow:0px 0px 8px black;
+   background-color: #1976D2;
+   box-shadow:0px 0px 8px black;
 }
+
 
 </style>

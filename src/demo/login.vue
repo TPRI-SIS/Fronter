@@ -1,7 +1,7 @@
 <template>
   <div class="login">
       <div>
-       <img src="../../assets/logo.png">
+       <img src="./asset/logo.png">
       </div>
   <mu-text-field label="用戶名"  labelFloat v-model="user" /></br>
   <mu-text-field label="密码" hintText="请输入密码" type="password" v-model="password" labelFloat/><br/>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
- import router from '../router'
+ import router from './router'
 
 export default {
   name: 'login',
@@ -26,7 +26,11 @@ export default {
     login:function(){
         console.log(this.user)
         console.log(this.password)
-        router.push("Navigate")
+
+        //用户名密码验证成功
+
+        this.$localStorage.set('isAuth',true)
+        router.push("/Nav")
     }
   }
   

@@ -7,8 +7,14 @@ import GoBack from './app/goBack'
 import GridLayout from './ui/gridLayout'
 import Scroll from './ui/scroll'
 import Config from './apiDefine/config'
-import Ajax from './apiDefine/ajax'
+
 import Gesture from './ui/gesture'
+import Screen from './ui/screen'
+import router from './app/router'
+
+
+import Ajax from './apiDefine/ajax'
+import LocalStorage from  './apiDefine/localStorage'
 
 
 Vue.use(MuseUI)
@@ -22,11 +28,13 @@ const components = {
 
 
 
-
 export default {
 
   install: function (instance) {
    instance.prototype.$ajax=Ajax
+   instance.prototype.$localStorage=LocalStorage
+   instance.prototype.$screen=Screen
+
 
     Object.keys(components).forEach((key) => {
       console.log(components[key])
@@ -38,5 +46,6 @@ export default {
     for (var key in Config) {
       Config[key] = c[key]
     }
-  }
+  },
+  router:router
 }
