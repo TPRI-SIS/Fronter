@@ -37,12 +37,10 @@ export default {
 
 
     Object.keys(components).forEach((key) => {
-      console.log(components[key])
       instance.component(components[key].name, components[key])
     })
   },
   config: function (c) {
-    console.log(Config)
     for (var key in Config) {
       Config[key] = c[key]
     }

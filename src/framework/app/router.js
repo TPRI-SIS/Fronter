@@ -1,16 +1,11 @@
 export default {
     init: function (router) {
 
- 
+        //路由发生时的钩子
         router.beforeEach((to, from, next) => {
             if (to.matched.some(record => record.meta.requiresAuth)) {
-                // this route requires auth, check if logged in
-                // if not, redirect to login page.
-
+                //验证用户，通过则继续，失败则跳入Login界面
                 var isAuth=typeof(localStorage['isAuth']) == 'undefined'?false:localStorage['isAuth']
-
-           
-                alert(isAuth)
 
                 if (!isAuth) {
                     next({
