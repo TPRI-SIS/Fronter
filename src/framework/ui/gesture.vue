@@ -11,7 +11,7 @@
 // Press:长按
 // swipeLeft:向左滑动
 // swipeRight:向右滑动
-// 用法：
+// 用法说明：
 //    <gesture :tap="handleTap" :swipeLeft="handleSwipeLeft">...</gesture>
 // tap为接收到的事件处理函数
 
