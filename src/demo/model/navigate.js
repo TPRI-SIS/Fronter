@@ -11,7 +11,7 @@ export default {
                 },
                 {
                     name: "统计数据",
-                    router: ""
+                    router: "EChartDemo"
                 },
                 {
                     name: "数据查询",

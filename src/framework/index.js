@@ -6,6 +6,7 @@ import $ from 'jquery'
 import GoBack from './app/goBack'
 import GridLayout from './ui/gridLayout'
 import Scroll from './ui/scroll'
+import VueEchart from './ui/VueEchart'
 import Config from './apiDefine/config'
 
 import Gesture from './ui/gesture'
@@ -23,7 +24,8 @@ const components = {
   GoBack,
   GridLayout,
   Scroll,
-  Gesture
+  Gesture,
+  VueEchart
 }
 
 

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Nav from './navigate'
 import Login from './login'
 import DataStaticBaseData from './app/dataStaticBaseData'
+import EChartDemo from './app/eChartDemo'
 
 Vue.use(Router)
 
@@ -23,6 +24,12 @@ export default new Router({
       path: '/DataStaticBaseData',
       name: 'DataStaticBaseData',
       component: DataStaticBaseData,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/EChartDemo',
+      name: 'EChartDemo',
+      component: EChartDemo,
       meta: { requiresAuth: true }
     }
   ]
