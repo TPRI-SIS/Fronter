@@ -5,6 +5,7 @@ import 'muse-ui/dist/theme-dark.css'
 import $ from 'jquery'
 import GoBack from './app/goBack'
 import GridLayout from './ui/gridLayout'
+import NavLayout from './ui/NavLayout'
 import Scroll from './ui/scroll'
 import VueEchart from './ui/VueEchart'
 import Config from './apiDefine/config'
@@ -23,6 +24,7 @@ Vue.use(MuseUI)
 const components = {
   GoBack,
   GridLayout,
+  NavLayout,
   Scroll,
   Gesture,
   VueEchart

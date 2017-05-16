@@ -56,7 +56,7 @@ export default {
         h.get('press').set({ time: 500 })
 
         //设置每毫秒像素移动触发滑动时间
-        h.get('swipe').set({ velocity: 1 })
+        h.get('swipe').set({ velocity: .3 })
 
         var handle = this
 
