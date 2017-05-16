@@ -1,7 +1,9 @@
 <template>
-    <div class="main">
-        <gesture :swipeRight="swipeRight"></gesture>
-    </div>
+
+        <div class="main">
+            <gesture :swipeRight="swipeRight"></gesture>
+        </div>
+
 </template>
 
 <script>
@@ -25,6 +27,14 @@ export default {
     background: red;
     height: 100%;
 }
+
+.fade-enter{
+    opacity: 0px
+}
+
+
+
+
 </style>
 
 

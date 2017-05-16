@@ -24,6 +24,8 @@
 
 import IScroll from 'iscroll'
 
+var scroll;
+
 export default {
     name: 'scroll',
     props: {
@@ -45,14 +47,18 @@ export default {
     },
 
     mounted() {
-        var scroll = new IScroll(this.$el, this.options)
+        scroll = new IScroll(this.$el, this.options)
     },
+    destroyed() {
+        scroll.destroy()
+    }
 }
 </script>
 
 <style scoped>
 .scroll {
     z-index: -1;
+    overflow: hidden;
 }
 </style>
 

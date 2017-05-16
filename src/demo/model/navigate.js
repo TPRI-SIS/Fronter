@@ -7,11 +7,11 @@ export default {
             subAppList: [
                 {
                     name: "基础数据",
-                    router: "DataStaticBaseData"
+                    router: "Sub/DataStaticBaseData"
                 },
                 {
                     name: "统计数据",
-                    router: "NavLayout"
+                    router: "Sub/NavLayout"
                 },
                 {
                     name: "数据查询",

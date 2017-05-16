@@ -28,7 +28,7 @@ export default {
   methods:{
     openOrClose:function () {  
       
-        this.open=this.open?false:true
+        this.$router.go(-1)
     },
     handleTrigger:function(e){
       

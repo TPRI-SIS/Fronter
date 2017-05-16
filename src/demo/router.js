@@ -21,13 +21,13 @@ export default new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/DataStaticBaseData',
+      path: '/Sub/DataStaticBaseData',
       name: 'DataStaticBaseData',
       component: DataStaticBaseData,
       meta: { requiresAuth: true }
     },
     {
-      path: '/NavLayout',
+      path: '/Sub/NavLayout',
       name: 'NavLayout',
       component: NavLayoutDemo,
       meta: { requiresAuth: true }
