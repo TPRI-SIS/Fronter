@@ -27,15 +27,16 @@ export default new Router({
       meta: { requiresAuth: true }
     },
     {
-<<<<<<< HEAD
+
       path: '/EChartDemo',
       name: 'EChartDemo',
       component: EChartDemo,
-=======
+    },
+    {
       path: '/Sub/NavLayout',
       name: 'NavLayout',
       component: NavLayoutDemo,
->>>>>>> 47c58e9bc46876d47edd0a563d8c9e8198377c98
+
       meta: { requiresAuth: true }
     }
   ]

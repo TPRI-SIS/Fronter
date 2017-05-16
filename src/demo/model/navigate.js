@@ -11,15 +11,11 @@ export default {
                 },
                 {
                     name: "统计数据",
-<<<<<<< HEAD
-                    router: "EChartDemo"
-=======
                     router: "Sub/NavLayout"
->>>>>>> 47c58e9bc46876d47edd0a563d8c9e8198377c98
                 },
                 {
                     name: "数据查询",
-                    router: ""
+                    router: "EChartDemo"
                 }
             ]
         },
