@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no" />
     <title>fronter</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
       html,body,#app{
-        height:100%;overflow:hidden;
+        height:100%;
       }
       </style>
+      <script>
+      document.addEventListener('touchmove',c=>{c.preventDefault()},false);
+      </script>
   </head>
   
   <body>
