@@ -4,6 +4,8 @@ import Nav from './navigate'
 import Login from './login'
 import DataStaticBaseData from './app/dataStaticBaseData'
 import EChartDemo from './app/eChartDemo'
+import NavLayoutDemo from './app/navLayoutDemo'
+
 
 Vue.use(Router)
 
