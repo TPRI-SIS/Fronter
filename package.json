@@ -10,7 +10,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "echarts": "^3.5.4",
+=======
+    "animate.css": "^3.5.2",
+>>>>>>> 47c58e9bc46876d47edd0a563d8c9e8198377c98
     "hammerjs": "^2.0.8",
     "iscroll": "^5.2.0",
     "jquery": "^3.2.1",
