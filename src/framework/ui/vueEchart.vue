@@ -1,16 +1,14 @@
 <template>
-    <div class="main">
-        <div id="chart" :style="styleObject"></div>
+    <div class="chart" style="height:100%;width:100%">
     </div>
 </template>
 <script>
     import echarts from 'echarts'
-    var myChart;
     export default {
         name: 'vueEchart',
         data() {
             return {
-                styleObject: this.mystyle
+                myChart: null
             }
         },
         props: {
@@ -20,20 +18,29 @@
                     return {}
                 }
             },
-            mystyle: {
-                type: Object,
+            autoResize: {
+                type: Boolean,
                 default: function() {
-                    return {
-                        width: '800px',
-                        height: '400px'
-                    }
+                    return true
                 }
+            },
+            chartClick: {
+                type: Function
             }
         },
         mounted: function() {
-            myChart = echarts.init(document.getElementById('chart'));
+            let vm = this;
+            this.myChart = echarts.init(this.$el);
             // 绘制图表
-            myChart.setOption(this.options);
+            this.myChart.setOption(this.options);
+            if (this.autoResize) {
+                window.addEventListener('resize', (e) => {
+                    this.myChart.resize()
+                });
+            }
+            this.myChart.on('click', function(params) {
+                vm.chartClick(params);
+            });
         },
         watch: {
             //注意：当观察的数据为对象或数组时，curVal和oldVal是相等的，因为这两个形参指向的是同一个数据对象 
@@ -42,17 +49,11 @@
                     this.refresh();　　　　　　　　　　
                 },
                 deep: true　　　　　　　　
-            },
-            mystyle: {　　　　　　　　　　　　　　　　　　　
-                handler(curVal, oldVal) {　　　　　　　　　　　　
-                    myChart.resize(this.mystyle);　　　　　　　　　
-                },
-                deep: true　　　　　　　　
             }
         },
         methods: {
             refresh: function() {
-                myChart.setOption(this.options);
+                this.myChart.setOption(this.options);
             }
         }
     }
