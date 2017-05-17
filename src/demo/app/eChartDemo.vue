@@ -8,7 +8,6 @@
 </template>
 
 <script>
-    var list = [5, 20, 36, 10, 10, 20];
     export default {
         name: 'eChartDemo',
         data() {
@@ -17,7 +16,7 @@
                     height: this.$screen.height
                 },
                 nowstyle: {
-                    width: '300px',
+                    width: '800px',
                     height: '400px'
                 },
                 options: {
@@ -42,6 +41,10 @@
         },
         methods: {
             changeTitle: function() {
+                this.nowstyle = {
+                    width: '400px',
+                    height: '300px'
+                }
                 this.options = {
                     title: {
                         text: 'Vue---ECharts'
