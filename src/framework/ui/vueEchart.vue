@@ -39,7 +39,9 @@
                 });
             }
             this.myChart.on('click', function(params) {
-                vm.chartClick(params);
+                if (vm.chartClick) {
+                    vm.chartClick(params);
+                }
             });
         },
         watch: {
