@@ -52,7 +52,7 @@ export default {
       menuStyle: {
         width: model.appList.length * 205 + model.appList.length + 'px',
         height: '205px',
-        position: 'absolute',
+        position: 'fixed',
         bottom: 0,
         left: 0
       },

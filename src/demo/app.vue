@@ -16,9 +16,11 @@ export default {
   },
   watch: {
     '$route'(to, from) {
-
-        const toDepth = to.path.split('/').length
-        const fromDepth = from.path.split('/').length
+      const toDepth = to.path.split('/').length
+      const fromDepth = from.path.split('/').length
+      if (toDepth == fromDepth)
+        this.trans = 'fade'
+      else
         this.trans = toDepth < fromDepth ? 'right' : 'left'
 
     }
@@ -33,36 +35,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-.right-leave-active,
-.right-enter-active {
-  transition: all .3s ease
-}
-
-.right-enter,
-.right-leave {
-  opacity: 0
-}
-
-
-.right-leave-active {
-  transform: translateX(480px);
-  opacity: 0;
-}
-
-.left-enter,
-.left-leave {
-  opacity: 0
-}
-
-.left-leave-active,
-.left-enter-active {
-  transition: all .3s ease
-}
-
-.left-leave-active {
-  transform: translateX(-480px);
-  opacity: 0;
 }
 </style>

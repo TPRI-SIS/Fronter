@@ -2,36 +2,36 @@
   <navLayout :open="open" :trigger="handleTrigger">
     <div slot="nav">
       <mu-appbar title="Title">
-
+  
       </mu-appbar>
     </div>
     <div class="content" slot="content">
-      <mu-appbar title="Title" >
+      <mu-appbar title="Title">
         <mu-icon-button icon="menu" slot="left" />
         <mu-flat-button label="expand_more" slot="right" />
         <mu-flat-button href="333" label="expand_more" slot="right" />
         <mu-icon-button icon="expand_more" slot="right" />
       </mu-appbar>
-
-        <mu-raised-button label="Primary" class="demo-raised-button" primary @click="openOrClose"/>
+  
+      <mu-raised-button label="Primary" class="demo-raised-button" primary @click="openOrClose" />
     </div>
   </navLayout>
 </template>
 <script>
 export default {
   name: 'navLayoutDemo',
-  data(){
-    return{
-        open:false
+  data() {
+    return {
+      open: false
     }
   },
-  methods:{
-    openOrClose:function () {  
-      
-        this.$router.go(-1)
+  methods: {
+    openOrClose: function () {
+
+      this.$router.go(-1)
     },
-    handleTrigger:function(e){
-      
+    handleTrigger: function (e) {
+
     }
   }
 }

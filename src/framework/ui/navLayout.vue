@@ -28,25 +28,13 @@
 // 向左滑动关闭导航栏
 
 
-let isDesktop = function () {
-    return window.innerWidth > 993
-}
-
-let isPad = function () {
-    return window.innerWidth > 480 && window.innerWidth <= 993
-}
-
-let isPhone = function () {
-    return window.innerWidth <= 480
-}
-
 export default {
     name: 'navLayout',
     data() {
         return {
-            openNav: !isPhone(),
-            docked: !isPhone(),
-            contentClass: !isPhone() ? 'min' : ''
+            openNav: !this.$screen.isPhone(),
+            docked: !this.$screen.isPhone(),
+            contentClass: !this.$screen.isPhone() ? 'min' : ''
         }
     },
 
@@ -55,8 +43,8 @@ export default {
             type: Boolean,
             default: true
         },
-        trigger:{
-            type:Function
+        trigger: {
+            type: Function
         }
     },
     watch: {
@@ -64,12 +52,12 @@ export default {
             this.openNav = value
         }
     },
-    computed:{
-        isOpen:function () {  
-             if (this.openNav)
-                this.contentClass = !isPhone() ? 'min' : ''
+    computed: {
+        isOpen: function () {
+            if (this.openNav)
+                this.contentClass = !this.$screen.isPhone() ? 'min' : ''
             else
-                this.contentClass = !isPhone() ? 'max' : ''
+                this.contentClass = !this.$screen.isPhone() ? 'max' : ''
             this.trigger(this.openNav)
             return this.openNav
         }

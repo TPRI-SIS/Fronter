@@ -12,7 +12,6 @@ let caculate=function(item)
     var offSetWidth = item.offsetLeft;
     var offSetHeight = item.offsetTop;
     
-console.log(item.parentNode.offsetHeight);
     var pWidth=item.parentNode.offsetWidth;
     var pHeight=item.parentNode.offsetHeight;
     

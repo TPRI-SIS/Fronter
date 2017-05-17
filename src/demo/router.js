@@ -30,7 +30,7 @@ export default new Router({
     },
     {
 
-      path: '/EChartDemo',
+      path: '/Sub/EChartDemo',
       name: 'EChartDemo',
       component: EChartDemo,
     },

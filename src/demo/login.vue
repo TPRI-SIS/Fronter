@@ -40,7 +40,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .login{
-    margin-top:120px;
+    margin-top:80px;
 }
 
 .cSwitch{

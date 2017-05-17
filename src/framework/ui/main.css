@@ -1,0 +1,67 @@
+/*跳转动画相关*/
+
+.right-leave-active,
+.right-enter-active {
+  transition: all .3s
+}
+
+
+.right-leave-active {
+    transform: translateX(480px);
+}
+
+.right-enter-active{
+    opacity: 1;
+
+}
+
+.right-enter{
+    opacity: 0;
+
+}
+
+
+
+.left-leave-active,
+.left-enter-active {
+  transition: all .3s; 
+
+}
+
+.left-enter-active{
+    opacity:1;
+    transform: translateX(0px);
+}
+
+.left-enter{
+    opacity: 1;
+    transform: translateX(480px);
+}
+
+.left-leave-active {
+  opacity: 0
+}
+
+
+.fade-leave-active,
+.fade-enter-active {
+  transition: all .3s
+}
+
+
+.fade-leave-active {
+    opacity: 0;
+}
+
+.fade-enter-active{
+    opacity: 1;
+
+}
+
+.fade-enter{
+    opacity: 0;
+
+}
+
+
+
