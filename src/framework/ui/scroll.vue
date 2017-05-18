@@ -1,6 +1,8 @@
 <template>
-    <div class="scroll">
-        <slot></slot>
+    <div class="wrapper">
+        <div v-bind:style="{width:width,height:height}">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -8,18 +10,13 @@
 // 滚动组件
 // options:配置选项
 // {
-//     mouseWheel: true,是否支持鼠标滚轮
-//     click: true,是否支持鼠标点击
-//     preventDefault: true,是否阻断事件冒泡
-//     tap: false,是否支持点击手势
-//     bounce: true,是否有回弹效果
-//     disableTouch: false,是否启用touch
 //     scrollX: true,横向滚动开关
 //     scrollY: false竖向滚动开关
 // }
-
+// height:外框高度
+// width:外框宽度
 // 用法：
-//    <scroll :options="contentOptions">...</scroll>
+//    <scroll :options="contentOptions" :width="width" :height="height">...</scroll>
 // tap为接收到的事件处理函数
 
 import IScroll from 'iscroll'
@@ -33,21 +30,32 @@ export default {
             type: Object,
             default: function () {
                 return {
-                    mouseWheel: true,
-                    click: true,
-                    preventDefault: true,
-                    tap: false,
-                    bounce: true,
-                    disableTouch: false,
-                    scrollX: true,
-                    scrollY: false
+                    scrollX: false,
+                    scrollY: true
                 }
             }
+        },
+        width: {
+            type: String
+        },
+        height: {
+            type: String
         }
     },
 
     mounted() {
-        scroll = new IScroll(this.$el, this.options)
+        var o = {
+            mouseWheel: true,
+            click: true,
+            preventDefault: true,
+            tap: true,
+            bounce: true,
+            disableTouch: false,
+            scrollX: this.options.scrollX,
+            scrollY: this.options.scrollY
+        }
+
+        scroll = new IScroll(this.$el, o)
     },
     destroyed() {
         scroll.destroy()
@@ -56,8 +64,8 @@ export default {
 </script>
 
 <style scoped>
-.scroll {
-    z-index: -1;
+.wrapper {
+
     overflow: hidden;
 }
 </style>

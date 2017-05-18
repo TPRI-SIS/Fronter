@@ -1,5 +1,5 @@
 <template>
-  <div class="navigate">
+  <div>
   
     <div class="header">
       <p class="title">{{mainTitle}}</p>
@@ -8,15 +8,11 @@
     <div v-bind:style='contentStyle' class="content">
   
     </div>
-    <scroll v-bind:options="scroll">
-      <div v-bind:style="menuStyle">
-  
+    <div class="footer">
+      <scroll v-bind:options="scroll" :width="menu.width" :height="menu.height">
         <div v-for="(item, index) in list" v-bind:class="'menuItem '+item.selectClass">
-  
           <div class="menuItemHeader">
-  
             <span class="mu-icon material-icons icon" @click="openOrCloseSubMenu(index)">menu</span>
-  
           </div>
           <div v-show="!item.showSubMenu" @click="openOrCloseSubMenu(index)">
             <i class="material-icons md-48 menuItemIcon">face</i>
@@ -32,9 +28,8 @@
           </div>
   
         </div>
-  
-      </div>
-    </scroll>
+      </scroll>
+    </div>
   </div>
 </template>
 
@@ -49,24 +44,15 @@ export default {
       mainTitle: '华能集团实时监管系统',
       subTitle: 'b',
       list: model.appList,
-      menuStyle: {
+      menu: {
         width: model.appList.length * 205 + model.appList.length + 'px',
         height: '205px',
-        position: 'fixed',
-        bottom: 0,
-        left: 0
       },
       contentStyle: {
         height: this.$screen.height - 45 + 'px',
-        zIndex:-1
+        zIndex: -1
       },
       scroll: {
-        mouseWheel: false,
-        click: true,
-        preventDefault: true,
-        tap: true,
-        bounce: true,
-        disableTouch: false,
         scrollX: true,
         scrollY: false
       }
@@ -127,19 +113,23 @@ export default {
 .header {
   height: 45px;
   position: absolute;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  height: 205px;
+  bottom: 0px;
+  position: absolute;
 }
 
 .content {
   position: absolute;
- 
   width: 100%;
   background-image: url('./asset/bg.png');
   top: 45px;
 }
 
-.footer {
-  margin-bottom: 0px;
-}
 
 
 .menuItem {
@@ -179,19 +169,6 @@ export default {
   text-align: left!important;
 }
 
-
-
-
-h1 {
-  font-size: 5.125rem;
-  color: white;
-  margin-top: 100px!important;
-}
-
-h2 {
-  font-size: 3.125rem;
-  color: white;
-}
 
 
 .select-active {
