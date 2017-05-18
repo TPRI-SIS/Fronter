@@ -44,6 +44,9 @@
                 }
             });
         },
+        beforeDestroy() {
+          this.myChart.dispose();
+        },
         watch: {
             //注意：当观察的数据为对象或数组时，curVal和oldVal是相等的，因为这两个形参指向的是同一个数据对象 
             options: {　　　　　　　　　　　　　　　　　　　
