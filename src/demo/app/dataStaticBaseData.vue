@@ -17,7 +17,7 @@ export default {
     data() {
         return {
             contentStyle: {
-                height: this.$screen.height
+                height: $screen.height
             },
             swipeRight: function (e) {
                 this.$router.go(-1)

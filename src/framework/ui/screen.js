@@ -25,6 +25,6 @@ export default {
                 break;
             }
         }
-        return flag;
+        return false;
     }
 }

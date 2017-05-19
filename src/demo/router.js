@@ -6,6 +6,7 @@ import LifeCicle from './app/lifeCicle'
 import DataStaticBaseData from './app/dataStaticBaseData'
 import EChartDemo from './app/eChartDemo'
 import NavLayoutDemo from './app/navLayoutDemo'
+import StackLayoutDemo from './app/stackLayoutDemo'
 
 
 Vue.use(Router)
@@ -39,6 +40,13 @@ export default new Router({
       path: '/Sub/NavLayout',
       name: 'NavLayout',
       component: NavLayoutDemo,
+
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/Sub/StackLayoutDemo',
+      name: 'StackLayoutDemo',
+      component: StackLayoutDemo,
 
       meta: { requiresAuth: true }
     }

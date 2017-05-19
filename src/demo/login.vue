@@ -29,7 +29,7 @@ export default {
 
         //用户名密码验证成功
 
-        this.$localStorage.set('isAuth',true)
+        $localStorage.set('isAuth',true)
         router.push("/Nav")
     }
   }

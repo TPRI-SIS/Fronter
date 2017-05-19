@@ -54,13 +54,13 @@ export default {
     name: 'eChartDemo',
     data() {
         return {
-            scrollHeight: this.$screen.height - 64 + 'px',
+            scrollHeight: $screen.height - 64 + 'px',
             scrollStyle:{
-                width:this.$screen.width+'px',
+                width:$screen.width+'px',
                 height:'2000px'
             },
             contentStyle: {
-                height: this.$screen.height
+                height: $screen.height
             },
             scrollOptions: {
                 scrollX: false,

@@ -50,20 +50,22 @@ export default {
     },
 
     mounted() {
+        console.log(this.options)
         var o = {
             mouseWheel: true,
             click: true,
-            preventDefault: false,
+            preventDefault: true,
             tap: true,
             bounce: true,
             disableTouch: false,
             scrollX: this.options.scrollX,
             scrollY: this.options.scrollY
         }
-        alert(this.$screen.isPC())
-        if (!this.$screen.isPC())
-        {
+
+        if (!$screen.isPC()) {
             scroll = new IScroll(this.$el, o)
+            this.overflowX = 'hidden'
+            this.overflowY = 'hidden'
         }
         else {
             this.overflowX = o.scrollX ? 'visible' : 'hidden'
@@ -73,7 +75,7 @@ export default {
         }
     },
     destroyed() {
-        if (!this.$screen.isPC())
+        if (!$screen.isPC())
             scroll.destroy()
     }
 }
