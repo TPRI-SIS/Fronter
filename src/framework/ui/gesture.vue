@@ -62,17 +62,21 @@ export default {
 
         //处理从右向左滑动
         h.on('swipeleft', function (ev) {
+
+            if(typeof(handle.swipeLeft)!='undefined')
             handle.swipeLeft(ev)
         })
 
         //处理从左向右滑动
         h.on('swiperight', function (ev) {
+             if(typeof(handle.swipeRight)!='undefined')
             handle.swipeRight(ev)
         })
 
 
         //处理长按滑动
         h.on('press', function (ev) {
+             if(typeof(handle.press)!='undefined')
             handle.press(ev)
         })
 

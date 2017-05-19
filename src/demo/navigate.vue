@@ -9,7 +9,7 @@
   
     </div>
     <div class="footer">
-      <scroll v-bind:options="scroll" :width="menu.width" :height="menu.height">
+      <scroll class="scroll" v-bind:options="scroll" :width="menu.width" :height="menu.height">
         <div v-for="(item, index) in list" v-bind:class="'menuItem '+item.selectClass">
           <div class="menuItemHeader">
             <span class="mu-icon material-icons icon" @click="openOrCloseSubMenu(index)">menu</span>
@@ -46,7 +46,7 @@ export default {
       list: model.appList,
       menu: {
         width: model.appList.length * 205 + model.appList.length + 'px',
-        height: '205px',
+        height: '229px',
       },
       contentStyle: {
         height: this.$screen.height - 45 + 'px',
@@ -118,7 +118,7 @@ export default {
 
 .footer {
   width: 100%;
-  height: 205px;
+  height: 229px;
   bottom: 0px;
   position: absolute;
 }
@@ -139,6 +139,7 @@ export default {
   width: 205px;
   background-color: #272E38;
   margin-left: 1px;
+  margin-top:24px;
 }
 
 .icon {

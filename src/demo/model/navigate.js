@@ -1,13 +1,13 @@
 export default {
     appList: [
         {
-            name: '数据汇总',
+            name: '基础',
             showSubMenu: false,
             selectClass: '',
             subAppList: [
                 {
-                    name: "基础数据",
-                    router: "Sub/DataStaticBaseData"
+                    name: "组件生命周期",
+                    router: "Sub/LifeCicle"
                 },
                 {
                     name: "统计数据",
@@ -20,7 +20,7 @@ export default {
             ]
         },
         {
-            name: '电量统计',
+            name: '布局',
             showSubMenu: false,
             selectClass: '',
             subAppList: [
