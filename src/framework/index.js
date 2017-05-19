@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
-import 'muse-ui/dist/theme-dark.css'
+import 'muse-ui/dist/theme-light.css'
 import './ui/main.css'
 import 'animate.css'
 import $ from 'jquery'

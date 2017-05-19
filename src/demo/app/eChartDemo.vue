@@ -7,37 +7,37 @@
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width" >
                     <div id="tt">aaaa</div>
                     <div style="height:500px;">
-                        <vueEchart :options="options1"  :chartClick="chartClick"></vueEchart>
+                        <vueEchart :options="options1"  v-on:chartclick="chartClick" auto-resize></vueEchart>
                     </div>
                     <div style="height:500px">
                         <vueEchart  :options="options2"></vueEchart>
                     </div>
                     <div style="height:500px;">
-                        <vueEchart  :options="options1"  :chartClick="chartClick"></vueEchart>
+                        <vueEchart  :options="options1"  v-on:chartclick="chartClick"></vueEchart>
                     </div>
                     <div style="height:500px">
                         <vueEchart  :options="options2"></vueEchart>
                     </div>
                     <div style="height:500px;">
-                        <vueEchart :options="options1"  :chartClick="chartClick"></vueEchart>
+                        <vueEchart :options="options1"  v-on:chartclick="chartClick"></vueEchart>
                     </div>
                     <div style="height:500px">
                         <vueEchart  :options="options2"></vueEchart>
                     </div>
                     <div style="height:500px;">
-                        <vueEchart  :options="options1"  :chartClick="chartClick"></vueEchart>
+                        <vueEchart  :options="options1"  v-on:chartclick="chartClick"></vueEchart>
                     </div>
                     <div style="height:500px">
                         <vueEchart  :options="options2"></vueEchart>
                     </div>
                     <div style="height:500px;">
-                        <vueEchart :options="options1"  :chartClick="chartClick"></vueEchart>
+                        <vueEchart :options="options1"  v-on:chartclick="chartClick"></vueEchart>
                     </div>
                     <div style="height:500px">
                         <vueEchart  :options="options2"></vueEchart>
                     </div>
                     <div style="height:500px;">
-                        <vueEchart  :options="options1"  :chartClick="chartClick"></vueEchart>
+                        <vueEchart  :options="options1"  v-on:chartclick="chartClick"></vueEchart>
                     </div>
                     <div style="height:500px">
                         <vueEchart  :options="options2"></vueEchart>

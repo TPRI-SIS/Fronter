@@ -6,7 +6,7 @@ import LifeCicle from './app/lifeCicle'
 import DataStaticBaseData from './app/dataStaticBaseData'
 import EChartDemo from './app/eChartDemo'
 import NavLayoutDemo from './app/navLayoutDemo'
-
+import GridList from './app/gridList'
 
 Vue.use(Router)
 
@@ -39,6 +39,13 @@ export default new Router({
       path: '/Sub/NavLayout',
       name: 'NavLayout',
       component: NavLayoutDemo,
+
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/Sub/GridList',
+      name: 'GridList',
+      component: GridList,
 
       meta: { requiresAuth: true }
     }

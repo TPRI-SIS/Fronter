@@ -26,7 +26,7 @@ export default {
             subAppList: [
                 {
                     name: "电量总貌",
-                    router: ""
+                    router: "/Sub/GridList"
                 },
                 {
                     name: "对比分析",

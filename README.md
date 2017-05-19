@@ -5,6 +5,7 @@
 ## Build Setup
 
 ``` bash
+# scoped 是针对当前组件的样式，外部及当前组件里的组件无法使用这里面的样式
 # install dependencies
 npm install
 
