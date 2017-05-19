@@ -5,7 +5,7 @@
                 <mu-flat-button label="确定" slot="right" @click="changeTitle" />
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width" >
-
+                    <div id="tt">aaaa</div>
                     <div style="height:500px;">
                         <vueEchart :options="options1"  :chartClick="chartClick"></vueEchart>
                     </div>
@@ -137,6 +137,11 @@ export default {
                 }]
             }
         }
+    },
+    mounted(){
+        var id=   document.getElementById('tt')
+        tt.addEventListener('click',(e)=>{alert('a')})
+
     },
      activated: function () {
       console.log(3)

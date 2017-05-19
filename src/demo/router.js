@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Nav from './navigate'
 import Login from './login'
+import LifeCicle from './app/lifeCicle'
 import DataStaticBaseData from './app/dataStaticBaseData'
 import EChartDemo from './app/eChartDemo'
 import NavLayoutDemo from './app/navLayoutDemo'
@@ -23,9 +24,9 @@ export default new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/Sub/DataStaticBaseData',
-      name: 'DataStaticBaseData',
-      component: DataStaticBaseData,
+      path: '/Sub/LifeCicle',
+      name: 'LifeCicle',
+      component: LifeCicle,
       meta: { requiresAuth: true }
     },
     {

@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper" :style="{overflowX:overflowX,overflowY:overflowY}">
         <div v-bind:style="{width:width,height:height}">
             <slot></slot>
         </div>
@@ -25,6 +25,12 @@ var scroll;
 
 export default {
     name: 'scroll',
+    data() {
+        return {
+            overflowX: '',
+            overflowY: ''
+        }
+    },
     props: {
         options: {
             type: Object,
@@ -47,27 +53,34 @@ export default {
         var o = {
             mouseWheel: true,
             click: true,
-            preventDefault: true,
+            preventDefault: false,
             tap: true,
             bounce: true,
             disableTouch: false,
             scrollX: this.options.scrollX,
             scrollY: this.options.scrollY
         }
+        alert(this.$screen.isPC())
+        if (!this.$screen.isPC())
+        {
+            scroll = new IScroll(this.$el, o)
+        }
+        else {
+            this.overflowX = o.scrollX ? 'visible' : 'hidden'
+            this.overflowY = o.scrollY ? 'visible' : 'hidden'
 
-        scroll = new IScroll(this.$el, o)
+            console.log(this.scrollX + '  ' + this.scrollY)
+        }
     },
     destroyed() {
-        scroll.destroy()
+        if (!this.$screen.isPC())
+            scroll.destroy()
     }
 }
 </script>
 
 <style scoped>
-.wrapper {
 
-    overflow: hidden;
-}
 </style>
 
 
