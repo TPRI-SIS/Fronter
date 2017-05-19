@@ -6,12 +6,8 @@ import LifeCicle from './app/lifeCicle'
 import DataStaticBaseData from './app/dataStaticBaseData'
 import EChartDemo from './app/eChartDemo'
 import NavLayoutDemo from './app/navLayoutDemo'
-<<<<<<< HEAD
 import GridList from './app/gridList'
-=======
 import StackLayoutDemo from './app/stackLayoutDemo'
-
->>>>>>> 4f4b9ad0ca7ee70ffaa8d4300f5a463218d124bd
 
 Vue.use(Router)
 
@@ -48,15 +44,15 @@ export default new Router({
       meta: { requiresAuth: true }
     },
     {
-<<<<<<< HEAD
       path: '/Sub/GridList',
       name: 'GridList',
       component: GridList,
-=======
+},
+{
       path: '/Sub/StackLayoutDemo',
       name: 'StackLayoutDemo',
       component: StackLayoutDemo,
->>>>>>> 4f4b9ad0ca7ee70ffaa8d4300f5a463218d124bd
+
 
       meta: { requiresAuth: true }
     }
