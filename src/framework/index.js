@@ -4,10 +4,11 @@ import 'muse-ui/dist/muse-ui.css'
 import 'muse-ui/dist/theme-light.css'
 import './ui/main.css'
 import 'animate.css'
-import $ from 'jquery'
+import Jquery from 'jquery'
 import GoBack from './app/goBack'
 import GridLayout from './ui/gridLayout'
 import NavLayout from './ui/NavLayout'
+import StackLayout from './ui/stackLayout'
 import Scroll from './ui/scroll'
 import VueEchart from './ui/VueEchart'
 import Config from './apiDefine/config'
@@ -27,6 +28,7 @@ const components = {
   GoBack,
   GridLayout,
   NavLayout,
+  StackLayout,
   Scroll,
   Gesture,
   VueEchart
@@ -37,9 +39,11 @@ const components = {
 export default {
 
   install: function (instance) {
-   instance.prototype.$ajax=Ajax
-   instance.prototype.$localStorage=LocalStorage
-   instance.prototype.$screen=Screen
+   window.$ajax=Ajax
+   window.$localStorage=LocalStorage
+   window.$screen=Screen
+
+   window.$=Jquery
 
 
     Object.keys(components).forEach((key) => {

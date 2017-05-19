@@ -28,6 +28,7 @@
           </div>
   
         </div>
+
       </scroll>
     </div>
   </div>
@@ -49,7 +50,7 @@ export default {
         height: '229px',
       },
       contentStyle: {
-        height: this.$screen.height - 45 + 'px',
+        height: $screen.height - 45 + 'px',
         zIndex: -1
       },
       scroll: {
@@ -81,7 +82,7 @@ export default {
   },
 
   mounted() {
-    this.$ajax.ajax(
+    $ajax.ajax(
       '',
       c => {
         console.log(c)

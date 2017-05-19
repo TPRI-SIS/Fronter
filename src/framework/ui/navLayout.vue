@@ -1,10 +1,10 @@
 <template>
-    <div class="main">
+    <div class="main" id="navLayout-content">
         <gesture :swipeRight="swipeRight" :swipeLeft="swipeLeft">
-            <mu-drawer :open="isOpen" :docked="docked">
+            <mu-drawer :open="isOpen" :docked="docked" class="nav">
                 <slot name="nav" />
             </mu-drawer>
-            <div v-bind:class="'content '+contentClass">
+            <div  v-bind:class="'content '+contentClass" :style="{width:width}">
                 <slot name="content" />
             </div>
         </gesture>
@@ -32,9 +32,10 @@ export default {
     name: 'navLayout',
     data() {
         return {
-            openNav: !this.$screen.isPhone(),
-            docked: !this.$screen.isPhone(),
-            contentClass: !this.$screen.isPhone() ? 'min' : ''
+            openNav: !$screen.isPhone(),
+            docked: !$screen.isPhone(),
+            contentClass: !$screen.isPhone() ? 'min' : '',
+            width: '999px'
         }
     },
 
@@ -54,10 +55,15 @@ export default {
     },
     computed: {
         isOpen: function () {
-            if (this.openNav)
-                this.contentClass = !this.$screen.isPhone() ? 'min' : ''
-            else
-                this.contentClass = !this.$screen.isPhone() ? 'max' : ''
+            if (this.openNav) {
+                this.contentClass = !$screen.isPhone() ? 'min' : ''
+                this.width=$('#navLayout-content').width()-256+"px"
+                console.log($('#navLayout-content').width())
+            }
+            else {
+                this.contentClass = !$screen.isPhone() ? 'max' : ''
+                this.width='100%'
+            }
             this.trigger(this.openNav)
             return this.openNav
         }
@@ -78,20 +84,23 @@ export default {
     height: 100%;
 }
 
+.nav{
+    position: absolute; 
+}
+
 .content {
     height: 100%;
+    position: absolute;
 }
 
 .max {
     transition: all .45s;
-    padding-left: 0px;
-    width: auto;
+    left: 0px;
 }
 
 .min {
     transition: all .45s;
-    padding-left: 256px;
-    width: auto;
+    left: 256px;
 }
 </style>
 

@@ -25,8 +25,14 @@ export default {
             selectClass: '',
             subAppList: [
                 {
+
                     name: "电量总貌",
-                    router: "/Sub/GridList"
+                    router: "/Sub/GridList",
+                },
+        {
+
+                    name: "stack布局",
+                    router: "Sub/StackLayoutDemo"
                 },
                 {
                     name: "对比分析",
