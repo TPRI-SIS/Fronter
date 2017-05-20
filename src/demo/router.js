@@ -8,6 +8,7 @@ import EChartDemo from './app/eChartDemo'
 import NavLayoutDemo from './app/navLayoutDemo'
 import GridList from './app/gridList'
 import StackLayoutDemo from './app/stackLayoutDemo'
+import PageLayoutDemo from './app/pageLayoutDemo'
 
 Vue.use(Router)
 
@@ -37,8 +38,8 @@ export default new Router({
       component: EChartDemo,
     },
     {
-      path: '/Sub/NavLayout',
-      name: 'NavLayout',
+      path: '/Sub/NavLayoutDemo',
+      name: 'NavLayoutDemo',
       component: NavLayoutDemo,
 
       meta: { requiresAuth: true }
@@ -47,11 +48,19 @@ export default new Router({
       path: '/Sub/GridList',
       name: 'GridList',
       component: GridList,
-},
-{
+    },
+    {
       path: '/Sub/StackLayoutDemo',
       name: 'StackLayoutDemo',
       component: StackLayoutDemo,
+
+
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/Sub/PageLayoutDemo',
+      name: 'PageLayoutDemo',
+      component: PageLayoutDemo,
 
 
       meta: { requiresAuth: true }

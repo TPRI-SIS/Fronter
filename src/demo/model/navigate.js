@@ -27,7 +27,7 @@ export default {
                 {
 
                     name: "电量总貌",
-                    router: "/Sub/GridList",
+                    router: "Sub/GridList",
                 },
         {
 
@@ -35,19 +35,19 @@ export default {
                     router: "Sub/StackLayoutDemo"
                 },
                 {
-                    name: "对比分析",
-                    router: ""
+                    name: "nav布局",
+                    router: "Sub/NavLayoutDemo"
                 }
             ]
         },
         {
-            name: '风机状态',
+            name: '布局2',
             showSubMenu: false,
             selectClass: '',
             subAppList: [
                 {
-                    name: "状态统计",
-                    router: ""
+                    name: "page布局",
+                    router: "Sub/PageLayoutDemo"
                 },
                 {
                     name: "长停风机监督",

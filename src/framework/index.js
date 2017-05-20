@@ -9,6 +9,7 @@ import GoBack from './app/goBack'
 import GridLayout from './ui/gridLayout'
 import NavLayout from './ui/NavLayout'
 import StackLayout from './ui/stackLayout'
+import PageLayout from './ui/pageLayout'
 import Scroll from './ui/scroll'
 import VueEchart from './ui/VueEchart'
 import Config from './apiDefine/config'
@@ -29,6 +30,7 @@ const components = {
   GridLayout,
   NavLayout,
   StackLayout,
+  PageLayout,
   Scroll,
   Gesture,
   VueEchart

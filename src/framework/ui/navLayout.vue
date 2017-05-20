@@ -35,7 +35,7 @@ export default {
             openNav: !$screen.isPhone(),
             docked: !$screen.isPhone(),
             contentClass: !$screen.isPhone() ? 'min' : '',
-            width: '999px'
+            width: '100%'
         }
     },
 
@@ -55,15 +55,18 @@ export default {
     },
     computed: {
         isOpen: function () {
-            if (this.openNav) {
-                this.contentClass = !$screen.isPhone() ? 'min' : ''
-                this.width=$('#navLayout-content').width()-256+"px"
-                console.log($('#navLayout-content').width())
+            if(!$screen.isPhone()){
+                if(this.openNav){
+                    this.contentClass ='min'
+                    this.width=$('#navLayout-content').width()-256+"px"
+                    
+                }
+                else{
+                    this.contentClass =  'max' 
+                    this.width='100%'
+                }
             }
-            else {
-                this.contentClass = !$screen.isPhone() ? 'max' : ''
-                this.width='100%'
-            }
+
             this.trigger(this.openNav)
             return this.openNav
         }
@@ -75,6 +78,13 @@ export default {
         swipeLeft: function (e) {
             this.openNav = false
         },
+    },
+    mounted(){
+         if(!$screen.isPhone()){
+              this.width=$('#navLayout-content').width()-256+"px"
+         }
+
+        console.log(this.width)
     }
 }
 </script>

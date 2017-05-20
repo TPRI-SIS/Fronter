@@ -7,7 +7,7 @@
 
 
 .right-leave-active {
-    transform: translateX(480px);
+    transform: translateX(100%);
 }
 
 .right-enter-active{
@@ -35,7 +35,7 @@
 
 .left-enter{
     opacity: 1;
-    transform: translateX(480px);
+    transform: translateX(100%);
 }
 
 .left-leave-active {
@@ -63,12 +63,10 @@
 
 }
 
-
-.component{
-    position: absolute;
-    width: 100%;
-    height:100%;
+.white{
+    color:white;
 }
+
 
 
 

@@ -61,6 +61,5 @@ export default {
     float: left;
 }
 
-.vertical {}
 </style>
 

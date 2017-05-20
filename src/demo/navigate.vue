@@ -10,7 +10,7 @@
     </div>
     <div class="footer">
       <scroll class="scroll" v-bind:options="scroll" :width="menu.width" :height="menu.height">
-        <div v-for="(item, index) in list" v-bind:class="'menuItem '+item.selectClass">
+        <a v-for="(item, index) in list" v-bind:class="'menuItem '+item.selectClass">
           <div class="menuItemHeader">
             <span class="mu-icon material-icons icon" @click="openOrCloseSubMenu(index)">menu</span>
           </div>
@@ -21,13 +21,16 @@
   
           <div class="subMenu" v-show="item.showSubMenu">
             <mu-list>
-              <mu-list-item v-for="subItem in item.subAppList" :title="subItem.name" :to="subItem.router">
+            <div v-for="subItem in item.subAppList">
+              <mu-list-item titleClass="white"  :title="subItem.name" :to="subItem.router">
                 <mu-icon class="icon" slot="right" value="label" />
               </mu-list-item>
+              <mu-divider/>
+            </div>
             </mu-list>
           </div>
   
-        </div>
+        </a>
 
       </scroll>
     </div>
@@ -107,6 +110,7 @@ export default {
   color: white!important;
 }
 
+
 .center {
   text-align: center;
 }
@@ -130,6 +134,7 @@ export default {
   background-image: url('./asset/bg.png');
   top: 45px;
 }
+
 
 
 

@@ -1,7 +1,7 @@
 <template>
   <navLayout :open="open" :trigger="handleTrigger">
     <div slot="nav">
-      <mu-appbar title="Title">
+      <mu-appbar title="open">
   
       </mu-appbar>
     </div>
@@ -9,7 +9,7 @@
       <mu-appbar title="Title" class="appBar">
         <mu-icon-button icon="menu" slot="left" />
         <mu-flat-button label="expand_more" slot="right" />
-        <mu-flat-button href="333" label="expand_more" slot="right" />
+        <mu-flat-button  label="返回" slot="right" @click='openOrClose' />
         <mu-icon-button icon="expand_more" slot="right" />
       </mu-appbar>
       <div class="appContent">
@@ -25,6 +25,11 @@ export default {
   data() {
     return {
       open: false
+    }
+  },
+  watch:{
+    open:function(value){
+      console.log(value)
     }
   },
   methods: {
