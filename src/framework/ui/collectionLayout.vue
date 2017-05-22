@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: 'pins',
+        name: 'collectionLayout',
         data() {
             return {}
         },
@@ -52,7 +52,7 @@
                     "border-left-width": "0px",
                     "border-style": "solid",
                     "overflow": "hidden",
-                    "color":"gray"
+                    "color":"rgba(160, 160, 160, 0.2)"
                 });
             }
         },

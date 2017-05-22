@@ -6,7 +6,7 @@ import LifeCicle from './app/lifeCicle'
 import DataStaticBaseData from './app/dataStaticBaseData'
 import EChartDemo from './app/eChartDemo'
 import NavLayoutDemo from './app/navLayoutDemo'
-import GridList from './app/gridList'
+import CollectionLayoutDemo from './app/collectionLayoutDemo'
 import StackLayoutDemo from './app/stackLayoutDemo'
 import PageLayoutDemo from './app/pageLayoutDemo'
 
@@ -45,9 +45,9 @@ export default new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/Sub/GridList',
-      name: 'GridList',
-      component: GridList,
+      path: '/Sub/CollectionLayoutDemo',
+      name: 'CollectionLayoutDemo',
+      component: CollectionLayoutDemo,
     },
     {
       path: '/Sub/StackLayoutDemo',

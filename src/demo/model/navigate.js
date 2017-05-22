@@ -26,8 +26,8 @@ export default {
             subAppList: [
                 {
 
-                    name: "电量总貌",
-                    router: "Sub/GridList",
+                    name: "宫格组件",
+                    router: "Sub/CollectionLayoutDemo",
                 },
         {
 

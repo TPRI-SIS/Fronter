@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <pins :cols="3">
+        <collectionLayout :cols="3">
             <a></a>
             <a></a>
             <a></a>
@@ -10,7 +10,7 @@
             <a></a>
             <a></a>
             <a></a>                
-        </pins>
+        </collectionLayout>
     </div>
 </template>
 
