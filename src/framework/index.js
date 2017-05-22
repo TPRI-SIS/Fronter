@@ -20,7 +20,7 @@ import Config from './apiDefine/config'
 import Gesture from './ui/gesture'
 import Screen from './ui/screen'
 import router from './app/router'
-
+import Pins from './ui/pins'
 
 import Ajax from './apiDefine/ajax'
 import LocalStorage from  './apiDefine/localStorage'
@@ -37,7 +37,8 @@ const components = {
   PageLayout,
   Scroll,
   Gesture,
-  VueEchart
+  VueEchart,
+  Pins
 }
 
 
