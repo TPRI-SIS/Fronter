@@ -9,6 +9,7 @@ import NavLayoutDemo from './app/navLayoutDemo'
 import CollectionLayoutDemo from './app/collectionLayoutDemo'
 import StackLayoutDemo from './app/stackLayoutDemo'
 import PageLayoutDemo from './app/pageLayoutDemo'
+import CardDemo from './app/CardDemo'
 
 Vue.use(Router)
 
@@ -61,6 +62,15 @@ export default new Router({
       path: '/Sub/PageLayoutDemo',
       name: 'PageLayoutDemo',
       component: PageLayoutDemo,
+
+
+      meta: { requiresAuth: true }
+    }
+    ,
+    {
+      path: '/Sub/CardDemo',
+      name: 'CardDemo',
+      component: CardDemo,
 
 
       meta: { requiresAuth: true }

@@ -6,6 +6,9 @@ import './ui/main.css'
 import 'animate.css'
 import Jquery from 'jquery'
 import GoBack from './app/goBack'
+import Card from './ui/card'
+
+
 import GridLayout from './ui/gridLayout'
 import NavLayout from './ui/NavLayout'
 import StackLayout from './ui/stackLayout'
@@ -27,6 +30,7 @@ Vue.use(MuseUI)
 
 const components = {
   GoBack,
+  Card,
   GridLayout,
   NavLayout,
   StackLayout,
