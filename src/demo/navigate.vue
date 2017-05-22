@@ -125,7 +125,7 @@ export default {
   width: 100%;
   height: 229px;
   bottom: 0px;
-  position: absolute;
+  position: fixed;
 }
 
 .content {
