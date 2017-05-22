@@ -1,10 +1,16 @@
 <template>
     <div class="main">
-        <mu-grid-list :cols="3">
-            <mu-grid-tile v-for="tile, index in list" :key="index" :titleBarClass="titleBarClass">
-                <mu-icon :value="tile.image" :size="96" color="orange" />
-            </mu-grid-tile>
-        </mu-grid-list>
+        <pins :cols="3">
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>                
+        </pins>
     </div>
 </template>
 
@@ -64,7 +70,7 @@
 <style scoped>
     
     .main {
-
+        height:400px
     }
 </style>
 <style>
