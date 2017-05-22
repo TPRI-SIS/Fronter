@@ -67,13 +67,13 @@ export default {
             ]
         },
         {
-            name: '风资源分析',
+            name: '组件',
             showSubMenu: false,
             selectClass: '',
             subAppList: [
                 {
-                    name: "风资源分析",
-                    router: ""
+                    name: "card",
+                    router: "Sub/CardDemo"
                 }
             ]
         },

@@ -55,13 +55,33 @@
 
 .fade-enter-active{
     opacity: 1;
-
 }
 
 .fade-enter{
     opacity: 0;
-
 }
+
+.reveal-leave-active,
+.reveal-enter-active {
+  transition: all .25s ease
+}
+
+
+
+.reveal-enter-active{
+    transform: translateY(0px);
+}
+
+.reveal-enter{
+    transform: translateY(100%);
+}
+
+.reveal-leave-active{
+    opacity:1;
+    transform: translateY(100%);
+}
+
+
 
 .white{
     color:white;
