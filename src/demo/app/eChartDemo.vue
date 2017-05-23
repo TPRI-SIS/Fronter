@@ -6,7 +6,7 @@
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width">
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize :isInit="isInitChart" :delayLoad="1000"></vueEchart>
+                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000"></vueEchart>
                  </div>                   
                 <div style="height:400px;padding:4px">
                     <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="500"></vueEchart>
