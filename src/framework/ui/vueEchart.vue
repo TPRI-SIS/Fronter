@@ -53,11 +53,11 @@
             theme: String,
             initOptions: Object,
             group: String,
-            isInit:{
+            isInit: {
                 type: Boolean,
                 default: false
             },
-            delayLoad:{
+            delayLoad: {
                 type: Number,
                 default: 500
             },
@@ -106,14 +106,14 @@
                 },
                 deep: true
             },
-             isInit: {
+            isInit: {
                 handler(isInit) {
                     if (!this.chart && isInit) {
                         this._init()
-                    } 
+                    }
                 },
                 deep: true
-            },           
+            },
             group: {
                 handler(group) {
                     this.chart.group = group
@@ -168,20 +168,17 @@
                 return this.chart[name](...args)
             },
             _init() {
-                if (this.chart) {
+                if (this.chart || !this.isInit) {
                     return
                 }
                 let chart = echarts.init(this.$el, this.theme, this.initOptions)
                 if (this.group) {
                     chart.group = this.group
                 }
-
-                if (this.isInit) {
-                    var vm=this;
-                    setTimeout(function() {
-                        chart.setOption(vm.options, true)
-                    }, this.delayLoad);
-                }
+                var vm = this;
+                setTimeout(function() {
+                    chart.setOption(vm.options, true)
+                }, this.delayLoad);
                 // expose ECharts events as custom events
                 ACTION_EVENTS.forEach(event => {
                     chart.on(event, params => {

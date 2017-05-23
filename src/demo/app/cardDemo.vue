@@ -11,7 +11,7 @@
                 <mu-raised-button label="平均值"  />
                 <mu-raised-button label="最大值"  />
             </div>
-            <div slot="reveal" class="reveal"  >
+            <div slot="reveal" class="reveal">
                  <vueEchart :options="options1" :isInit="chart1Init"></vueEchart>
             </div> 
 
