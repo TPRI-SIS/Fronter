@@ -33,7 +33,7 @@
         name: 'gridList',
         data() {
             return {
-                scrollHeight: $screen.height - 64 + 'px',
+                scrollHeight: $screen.height + 'px',
                 scrollStyle: {
                     width: $screen.width + 'px',
                     height: '2000px'
