@@ -26,7 +26,7 @@
           </mu-menu>
         </mu-popover>
       <div class="appContent">
-        <p>{{contentTitle}}</p>
+        <h1>{{contentTitle}}</h1>
       </div>
       <mu-toast v-if="toast" message="一段简单的文本" />
     </div>

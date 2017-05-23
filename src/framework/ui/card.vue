@@ -33,7 +33,7 @@ export default {
             showContent: true,
             showAction: true,
             showReveal: true,
-            openReveal: false
+            openReveal: true
         }
     },
     methods: {
