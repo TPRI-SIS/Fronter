@@ -47,16 +47,24 @@
         'globalout'
     ]
     export default {
-        name:'vueEchart',
+        name: 'vueEchart',
         props: {
             options: Object,
             theme: String,
             initOptions: Object,
             group: String,
-            autoResize:{
-                type:Boolean,
-                default:false
-            } 
+            isInit:{
+                type: Boolean,
+                default: false
+            },
+            delayLoad:{
+                type: Number,
+                default: 500
+            },
+            autoResize: {
+                type: Boolean,
+                default: false
+            }
         },
         data() {
             return {
@@ -98,6 +106,14 @@
                 },
                 deep: true
             },
+             isInit: {
+                handler(isInit) {
+                    if (!this.chart && isInit) {
+                        this._init()
+                    } 
+                },
+                deep: true
+            },           
             group: {
                 handler(group) {
                     this.chart.group = group
@@ -159,7 +175,13 @@
                 if (this.group) {
                     chart.group = this.group
                 }
-                chart.setOption(this.options, true)
+
+                if (this.isInit) {
+                    var vm=this;
+                    setTimeout(function() {
+                        chart.setOption(vm.options, true)
+                    }, this.delayLoad);
+                }
                 // expose ECharts events as custom events
                 ACTION_EVENTS.forEach(event => {
                     chart.on(event, params => {

@@ -27,7 +27,7 @@
                 var rowCount = Math.ceil(itemCount / cols);
                 var pWidth = item.parentNode.offsetWidth / cols;
                 var pHeight = item.parentNode.offsetHeight / rowCount;
-
+                console.log(item.parentNode.offsetHeight);
                 var isLastComlum=(index+1)%cols==0;
                 var borderRightWidth=isLastComlum?"0px":"1px";
 
@@ -52,7 +52,7 @@
                     "border-left-width": "0px",
                     "border-style": "solid",
                     "overflow": "hidden",
-                    "color":"rgba(160, 160, 160, 0.2)"
+                    "color":"rgba(160, 160, 160, 0.3)"
                 });
             }
         },

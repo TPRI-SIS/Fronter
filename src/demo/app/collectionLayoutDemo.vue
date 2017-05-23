@@ -1,16 +1,29 @@
 <template>
     <div class="main">
-        <collectionLayout :cols="3">
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>                
-        </collectionLayout>
+        <gesture :swipeRight="swipeRight">
+             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width" >
+                 <div class="bigTitle">火电风电</div>
+                 <collectionLayout :cols="3" :style="{height:'350px'}">
+                    <a v-for="tile, index in listOne" :key="index">
+                        <div style="height:63px;margin-top:calc((100% - 50px)/2);">
+                        <mu-icon :value="tile.icon" :size="36" :color="tile.color" />
+                        <span style="color:black;display:inherit;">{{tile.title}}</span>
+                        </div>
+                    </a>
+                </collectionLayout>
+                <div class="bigTitle">清洁能源</div>
+                <collectionLayout :cols="3" :style="{height:'350px'}">
+                    <a v-for="tile, index in listOne" :key="index">
+                    <div style="height:63px;margin-top:calc((100% - 50px)/2);">                   
+                        <mu-icon :value="tile.icon" :size="36" :color="tile.color" />
+                        <span style="color:black;display:inherit;">{{tile.title}}</span>
+                     </div>    
+                    </a>
+                </collectionLayout>                 
+                    
+            </scroll>       
+
+        </gesture>
     </div>
 </template>
 
@@ -20,61 +33,69 @@
         name: 'gridList',
         data() {
             return {
-                list: [{
-                    image: 'home',
-                    title: 'Breakfast',
-                    author: 'Myron'
+                scrollHeight: $screen.height + 'px',
+                scrollStyle: {
+                    width: $screen.width + 'px',
+                    height: '2000px'
+                },
+                contentStyle: {
+                    height: $screen.height,
+                    width:$screen.width
+                },
+                scrollOptions: {
+                    scrollX: false,
+                    scrollY: true
+                },
+                swipeRight: function(e) {
+                    this.$router.go(-1)
+                },
+                listOne: [{
+                    title: '组织机构',
+                    icon: 'home',
+                    color: 'red'
                 }, {
-                    image: '/images/burger.jpg',
-                    title: 'Burger',
-                    author: 'Linyu'
+                    title: '发电功率',
+                    icon: 'flight_takeoff',
+                    color: 'blue'
                 }, {
-                    image: '/images/camera.jpg',
-                    title: 'Camera',
-                    author: 'ruolin'
+                    title: '发电负荷',
+                    icon: 'cloud_download',
+                    color: 'green'
                 }, {
-                    image: '/images/hats.jpg',
-                    title: 'Hats',
-                    author: 'kakali'
+                    title: '机组效率',
+                    icon: 'videogame_asset',
+                    color: '#EE175A'
                 }, {
-                    image: '/images/honey.jpg',
-                    title: 'Honey',
-                    author: 'yuyang'
+                    title: '实时负荷',
+                    icon: 'android',
+                    color: '#17D7EE'
                 }, {
-                    image: '/images/morning.jpg',
-                    title: 'Morning',
-                    author: 'mokayi'
+                    title: '报警查询',
+                    icon: 'grade',
+                    color: '#5AEF17'
                 }, {
-                    image: '/images/vegetables.jpg',
-                    title: 'Vegetables',
-                    author: 'NUyyyyyyy'
-                }, {
-                    image: '/images/water-plant.jpg',
-                    title: 'water',
-                    author: 'TDDyyyyyyy'
-                }, {
-                    image: '/images/water-plant.jpg',
-                    title: 'water',
-                    author: 'TDDyyyyyyy'
-                }],
-                titleBarClass:['titleBar']
-                    
-
+                    title: '图形分析',
+                    icon: 'home',
+                    color: '#7F2F0E'
+                }]
             }
         },
-        methods: {
-        }
+        methods: {}
     }
 </script>
 
 <style scoped>
-    
     .main {
-        height:400px
+        height: 100%;
+    }
+    .bigTitle{
+        background-color:rgba(160, 160, 160, 0.2);
+        text-align: left;
+        padding:5px
     }
 </style>
 <style>
-    .titleBar{
-       display:none!important;
+    .titleBar {
+        display: none!important;
     }
 </style>
