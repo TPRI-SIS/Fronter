@@ -3,18 +3,18 @@
         <gesture :swipeRight="swipeRight">
              <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width" >
                  <div class="bigTitle">火电风电</div>
-                 <collectionLayout :cols="3" :style="{height:'350px'}">
+                 <collectionLayout :cols="3" :style="{height:'350px',position:'relative'}">
                     <a v-for="tile, index in listOne" :key="index">
-                        <div style="height:63px;margin-top:calc((100% - 50px)/2);">
+                        <div style="height:63px;position:absolute;width:100%;top:calc((100% - 63px)/2);">
                         <mu-icon :value="tile.icon" :size="36" :color="tile.color" />
                         <span style="color:black;display:inherit;">{{tile.title}}</span>
                         </div>
                     </a>
                 </collectionLayout>
                 <div class="bigTitle">清洁能源</div>
-                <collectionLayout :cols="3" :style="{height:'350px'}">
+                <collectionLayout :cols="3" :style="{height:'350px',position:'relative'}">
                     <a v-for="tile, index in listOne" :key="index">
-                    <div style="height:63px;margin-top:calc((100% - 50px)/2);">                   
+                    <div style="height:63px;position:absolute;width:100%;top:calc((100% - 63px)/2);">                   
                         <mu-icon :value="tile.icon" :size="36" :color="tile.color" />
                         <span style="color:black;display:inherit;">{{tile.title}}</span>
                      </div>    
