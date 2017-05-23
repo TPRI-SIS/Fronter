@@ -6,16 +6,20 @@
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width">
                 <div style="height:400px;padding:4px">
+<<<<<<< HEAD
                     <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize :isInit="isInitChart" :delayLoad="1000"></vueEchart>
+=======
+                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="500"></vueEchart>
+>>>>>>> 5b24b86fa1c671e688d4090188f967a04cb0a93f
                 </div>
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options2" isInit :delayLoad="2000"></vueEchart>
+                    <vueEchart :options="options2" isInit :delayLoad="700"></vueEchart>
                 </div>
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options3" v-on:chartclick="chartClick" isInit :delayLoad="3000"></vueEchart>
+                    <vueEchart :options="options3" v-on:chartclick="chartClick" isInit :delayLoad="900"></vueEchart>
                 </div>
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options4" isInit :delayLoad="4000"></vueEchart>
+                    <vueEchart :options="options4" isInit :delayLoad="1100"></vueEchart>
                 </div>
             </scroll>
         </gesture>
