@@ -6,6 +6,7 @@ import './ui/main.css'
 import 'animate.css'
 import Jquery from 'jquery'
 import GoBack from './app/goBack'
+import VueEchart from './app/VueEchart'
 import Card from './ui/card'
 
 
@@ -14,16 +15,18 @@ import NavLayout from './ui/NavLayout'
 import StackLayout from './ui/stackLayout'
 import PageLayout from './ui/pageLayout'
 import Scroll from './ui/scroll'
-import VueEchart from './ui/VueEchart'
+
 import Config from './apiDefine/config'
 
 import Gesture from './ui/gesture'
-import Screen from './ui/screen'
+
 import router from './app/router'
 import CollectionLayout from './ui/collectionLayout'
 
 import Ajax from './apiDefine/ajax'
 import LocalStorage from  './apiDefine/localStorage'
+import Screen from './apiDefine/screen'
+
 
 
 Vue.use(MuseUI)
@@ -51,6 +54,10 @@ export default {
    window.$screen=Screen
 
    window.$=Jquery
+
+   require('./ui/waves')
+
+   Waves.init();
 
 
     Object.keys(components).forEach((key) => {

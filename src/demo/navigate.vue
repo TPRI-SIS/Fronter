@@ -10,7 +10,7 @@
     </div>
     <div class="footer">
       <scroll class="scroll" v-bind:options="scroll" :width="menu.width" :height="menu.height">
-        <a v-for="(item, index) in list" v-bind:class="'menuItem '+item.selectClass">
+        <a v-for="(item, index) in list" v-bind:class="'menuItem waves-effect waves-light '+item.selectClass" :key="index">
           <div class="menuItemHeader">
             <span class="mu-icon material-icons icon" @click="openOrCloseSubMenu(index)">menu</span>
           </div>
