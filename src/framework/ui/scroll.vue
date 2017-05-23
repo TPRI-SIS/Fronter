@@ -54,7 +54,7 @@ export default {
         var o = {
             mouseWheel: true,
             click: true,
-            preventDefault: true,
+            preventDefault: false,
             tap: true,
             bounce: true,
             disableTouch: false,

@@ -47,6 +47,7 @@ export default {
             disableTouch: false,
             scrollX: true,
             scrollY: true,
+            deceleration:0.01,
             snap: true
         }
         vm = this
