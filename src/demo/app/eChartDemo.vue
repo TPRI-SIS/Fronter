@@ -6,7 +6,7 @@
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width">
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000"></vueEchart>
+                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize :isInit="isInitChart" :delayLoad="1000"></vueEchart>
                 </div>
                 <div style="height:400px;padding:4px">
                     <vueEchart :options="options2" isInit :delayLoad="2000"></vueEchart>
@@ -32,6 +32,7 @@
                     width: $screen.width + 'px',
                     height: '2000px'
                 },
+                isInitChart:false,
                 contentStyle: {
                     height: $screen.height
                 },
@@ -263,6 +264,7 @@
                 }
             },
             changeTitle: function() {
+                this.isInitChart=true;
                 this.options1 = {
                     title: {
                         text: 'Vue---ECharts'
