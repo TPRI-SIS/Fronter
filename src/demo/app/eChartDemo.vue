@@ -5,42 +5,17 @@
                 <mu-flat-button label="确定" slot="right" @click="changeTitle" />
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width">
-                <div id="tt">aaaa</div>
-                <div style="height:400px;">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize></vueEchart>
+                <div style="height:400px;padding:4px">
+                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000"></vueEchart>
                 </div>
-                <div style="height:400px">
-                    <vueEchart :options="options2"></vueEchart>
+                <div style="height:400px;padding:4px">
+                    <vueEchart :options="options2" isInit :delayLoad="2000"></vueEchart>
                 </div>
-                <div style="height:400px;">
-                    <vueEchart :options="options3" v-on:chartclick="chartClick"></vueEchart>
+                <div style="height:400px;padding:4px">
+                    <vueEchart :options="options3" v-on:chartclick="chartClick" isInit :delayLoad="3000"></vueEchart>
                 </div>
-                <div style="height:400px">
-                    <vueEchart :options="options4"></vueEchart>
-                </div>
-                <div style="height:500px;">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick"></vueEchart>
-                </div>
-                <div style="height:500px">
-                    <vueEchart :options="options2"></vueEchart>
-                </div>
-                <div style="height:500px;">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick"></vueEchart>
-                </div>
-                <div style="height:500px">
-                    <vueEchart :options="options2"></vueEchart>
-                </div>
-                <div style="height:500px;">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick"></vueEchart>
-                </div>
-                <div style="height:500px">
-                    <vueEchart :options="options2"></vueEchart>
-                </div>
-                <div style="height:500px;">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick"></vueEchart>
-                </div>
-                <div style="height:500px">
-                    <vueEchart :options="options2"></vueEchart>
+                <div style="height:400px;padding:4px">
+                    <vueEchart :options="options4" isInit :delayLoad="4000"></vueEchart>
                 </div>
             </scroll>
         </gesture>
@@ -306,10 +281,7 @@
             }
         },
         mounted() {
-            var id = document.getElementById('tt')
-            tt.addEventListener('click', (e) => {
-                alert('a')
-            })
+
         },
         activated: function() {
             console.log(3)
