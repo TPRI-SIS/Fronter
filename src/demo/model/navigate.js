@@ -26,7 +26,7 @@ export default {
             subAppList: [
                 {
 
-                    name: "宫格组件",
+                    name: "collection组件",
                     router: "Sub/CollectionLayoutDemo",
                 },
         {
@@ -48,21 +48,6 @@ export default {
                 {
                     name: "page布局",
                     router: "Sub/PageLayoutDemo"
-                },
-                {
-                    name: "长停风机监督",
-                    router: ""
-                }
-            ]
-        },
-        {
-            name: '故障汇总',
-            showSubMenu: false,
-            selectClass: '',
-            subAppList: [
-                {
-                    name: "故障汇总",
-                    router: ""
                 }
             ]
         },
@@ -74,17 +59,10 @@ export default {
                 {
                     name: "card",
                     router: "Sub/CardDemo"
-                }
-            ]
-        },
-        {
-            name: '巡检路线',
-            showSubMenu: false,
-            selectClass: '',
-            subAppList: [
+                },
                 {
-                    name: "巡检路线",
-                    router: ""
+                    name: "echart",
+                    router: "Sub/EChartDemo"
                 }
             ]
         }

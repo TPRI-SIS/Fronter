@@ -2,7 +2,7 @@
     <div class="main">
         <gesture :swipeRight="back">
         <scroll :style="{height:scrollHeight}" height="1000px">
-        <card class="card default" :style="{width:cardWidth}">
+        <card class="card default" :style="{width:cardWidth}" :onRevealTrigger="triggerChart1">
             <div slot="title">实时负荷</div>
             <div slot="content">
                 <p class="num">33MW</p>
@@ -12,7 +12,7 @@
                 <mu-raised-button label="最大值"  />
             </div>
             <div slot="reveal" class="reveal"  >
-                 <vueEchart :options="options1"></vueEchart>
+                 <vueEchart :options="options1" :isInit="chart1Init"></vueEchart>
             </div> 
 
         </card>
@@ -80,6 +80,7 @@ export default {
         return{
             cardWidth:$screen.isPhone()?($screen.width-24+'px'):($screen.width/2-24+'px'),
             scrollHeight:$screen.height+'px',
+            chart1Init:false,
              options1: {
                 title: {
                     text: 'Vue---ECharts'
@@ -100,10 +101,14 @@ export default {
     methods:{
         back:function(){
             this.$router.go(-1)
+        },
+        triggerChart1:function(e){
+            if(e)
+            this.chart1Init=true
         }
     },
     mounted(){
-        alert($screen.isPhone()?($screen.width-24+'px'):($screen.width/2-24+'px'))
+
     }
 }
 </script>

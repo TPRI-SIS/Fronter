@@ -15,10 +15,10 @@
         <transition name="reveal">
             <div id="cardReveal" v-show="openReveal" class="reveal">
                 <div class="revealCloseDiv">
-                   <i class="material-icons md-32 menuItemIcon revealCloseBtn " @click="triggerReveal">close</i>
+                    <i class="material-icons md-32 menuItemIcon revealCloseBtn " @click="triggerReveal">close</i>
                 </div>
                 <slot name="reveal"></slot>
-             
+    
             </div>
         </transition>
     </div>
@@ -33,12 +33,20 @@ export default {
             showContent: true,
             showAction: true,
             showReveal: true,
-            openReveal: true
+            openReveal: false
         }
     },
     methods: {
         triggerReveal: function () {
             this.openReveal = this.openReveal ? false : true
+
+            if (typeof (this.onRevealTrigger) != 'undefined')
+                this.onRevealTrigger(this.openReveal)
+        }
+    },
+    props: {
+        onRevealTrigger: {
+            type: Function,
         }
     },
     mounted() {
@@ -93,18 +101,16 @@ export default {
     height: 100%;
     top: 0px;
     background: white;
-    color:black;
-
+    color: black;
 }
 
 .revealCloseDiv {
 
-width: 100%;
-height: 24px;
-
+    width: 100%;
+    height: 24px;
 }
 
-.revealCloseBtn{
+.revealCloseBtn {
     float: right;
 }
 
