@@ -5,7 +5,7 @@
     </div>
     <div class="form">
       <mu-text-field label="用戶名" labelFloat v-model="user" />
-      </br>
+      <br/>
       <mu-text-field label="密码" hintText="请输入密码" type="password" v-model="password" labelFloat/>
       <br/>
       <mu-switch label="记住我" class="demo-switch left cSwitch" labelLeft v-model="remember" />
