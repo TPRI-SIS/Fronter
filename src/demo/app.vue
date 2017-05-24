@@ -26,6 +26,12 @@ export default {
         this.trans = toDepth < fromDepth ? 'right' : 'left'
 
     }
+  },
+  mounted(){
+
+  },
+  methods:{
+
   }
 }
 </script>

@@ -12,7 +12,7 @@
       <br/>
       <mu-raised-button label="登录" class="demo-raised-button cButton" primary @click="login" />
     </div>
-  
+
   </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
 
 .form{
   position: absolute;
-  bottom: 48px;
+  bottom: 120px;
   left: calc(100%/2 - 130px)
 }
 
