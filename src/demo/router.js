@@ -10,6 +10,7 @@ import CollectionLayoutDemo from './app/collectionLayoutDemo'
 import StackLayoutDemo from './app/stackLayoutDemo'
 import PageLayoutDemo from './app/pageLayoutDemo'
 import CardDemo from './app/CardDemo'
+import LoadingDemo from './app/loadingDemo'
 
 Vue.use(Router)
 
@@ -75,5 +76,14 @@ export default new Router({
 
       meta: { requiresAuth: true }
     }
+     ,
+    {
+      path: '/Sub/LoadingDemo',
+      name: 'LoadingDemo',
+      component: LoadingDemo,
+
+
+      meta: { requiresAuth: true }
+    }   
   ]
 })

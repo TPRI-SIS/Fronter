@@ -27,6 +27,8 @@ import Ajax from './apiDefine/ajax'
 import LocalStorage from  './apiDefine/localStorage'
 import Screen from './apiDefine/screen'
 
+import Loading from './ui/loading'
+
 
 
 Vue.use(MuseUI)
@@ -41,7 +43,8 @@ const components = {
   Scroll,
   Gesture,
   VueEchart,
-  CollectionLayout
+  CollectionLayout,
+  Loading
 }
 
 
