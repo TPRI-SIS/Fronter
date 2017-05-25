@@ -1,12 +1,12 @@
 <template>
   <div>
-  
+
     <div class="header">
       <p class="title">{{mainTitle}}</p>
     </div>
-  
+
     <div v-bind:style='contentStyle' class="content">
-  
+
     </div>
     <div class="footer">
       <scroll class="scroll" v-bind:options="scroll" :width="menu.width" :height="menu.height">
@@ -18,7 +18,7 @@
             <i class="material-icons md-48 menuItemIcon">face</i>
             <p class="menuItemTitle">{{item.name}}</p>
           </div>
-  
+
           <div class="subMenu" v-show="item.showSubMenu">
             <mu-list>
             <div v-for="subItem in item.subAppList">
@@ -29,7 +29,7 @@
             </div>
             </mu-list>
           </div>
-  
+
         </a>
 
       </scroll>
@@ -132,6 +132,9 @@ export default {
   position: absolute;
   width: 100%;
   background-image: url('./asset/bg.png');
+  -webkit-background-size:100% 100%;
+  background-size:100% 100%;
+  background-repeat: no-repeat;
   top: 45px;
 }
 

@@ -26,9 +26,9 @@ import CollectionLayout from './ui/collectionLayout'
 import Ajax from './apiDefine/ajax'
 import LocalStorage from  './apiDefine/localStorage'
 import Screen from './apiDefine/screen'
+import Geo from './apiDefine/geo'
 
 import Loading from './ui/loading'
-
 
 
 Vue.use(MuseUI)
@@ -48,19 +48,20 @@ const components = {
 }
 
 
-
 export default {
 
   install: function (instance) {
-   window.$ajax=Ajax
-   window.$localStorage=LocalStorage
-   window.$screen=Screen
+    window.$ajax = Ajax
+    window.$localStorage = LocalStorage
+    window.$screen = Screen
+    window.$geo = Geo
 
-   window.$=Jquery
 
-   require('./ui/waves')
+    window.$ = Jquery
 
-   Waves.init();
+    require('./ui/waves')
+
+    Waves.init();
 
 
     Object.keys(components).forEach((key) => {
@@ -69,8 +70,9 @@ export default {
   },
   config: function (c) {
     for (var key in Config) {
-      Config[key] = c[key]
+      if (typeof(c[key]) != 'undefined')
+        Config[key] = typeof(c[key])
     }
   },
-  router:router
+  router: router
 }

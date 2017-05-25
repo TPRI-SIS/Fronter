@@ -9,7 +9,8 @@ import framework from '../framework'
 framework.config(
   {
     ajax: 'browers',
-    localStorage:'browers'
+    localStorage:'browers',
+    geo:'browers'
   }
 )
 
@@ -19,7 +20,7 @@ Vue.use(framework)
 
 
 //初始化路由系统
-framework.router.init(router) 
+framework.router.init(router)
 
 
 /* eslint-disable no-new */

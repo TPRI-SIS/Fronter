@@ -26,5 +26,12 @@ export default {
             }
         }
         return false;
+    },
+    init:function () {
+      var o=this;
+      window.addEventListener('resize',()=>{
+          o.width=document.body.offsetWidth
+          o.height=document.body.offsetHeight
+        })
     }
 }
