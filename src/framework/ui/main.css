@@ -78,7 +78,11 @@
 }
 
 .fade-enter-active{
-    opacity: 1;
+    opacity: .4;
+}
+
+.fade-leave{
+  opacity: .4;
 }
 
 .fade-enter{

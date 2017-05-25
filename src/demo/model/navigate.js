@@ -63,6 +63,10 @@ export default {
                 {
                     name: "echart",
                     router: "Sub/EChartDemo"
+                },
+                {
+                    name: "loading",
+                    router: "Sub/LoadingDemo"
                 }
             ]
         }
