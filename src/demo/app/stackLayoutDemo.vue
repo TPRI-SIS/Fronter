@@ -10,11 +10,11 @@
     </mu-tabs>
 
 
-    <scroll class="scrollV" :style="{height:mainScrollHeight}" :options="scroll2" height="1200px" width="100%">
+    <scroll class="scrollV" :style="{height:mainScrollHeight}" :options="scroll2" height="900px" width="100%">
       <p class="title">装机必备</p>
       <p class="title sub">想要的都在这里</p>
       <stackLayout direction="vertical">
-        <scroll class="scroll" :options="scroll" height="100px" width="1400px">
+        <scroll class="scroll" :options="scroll" height="100px" width="1086px">
           <stackLayout>
             <div class="item green waves-effect">
               <div class="itemM green2">
@@ -119,15 +119,134 @@
       <p class="title">精品游戏</p>
       <p class="title sub">小编精选，不容错过</p>
       <stackLayout direction="vertical">
-        <scroll class="scroll" :options="scroll" height="100px" width="1400px">
+        <scroll class="scroll" :options="scroll" height="100px" width="1086px">
           <stackLayout>
-            <div class="h red"/>
-            <div class="h orange"/>
-            <div class="h yellow"/>
-            <div class="h green"/>
-            <div class="h cyan"/>
-            <div class="h blue"/>
-            <div class="h purple"/>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
           </stackLayout>
         </scroll>
       </stackLayout>
@@ -135,15 +254,134 @@
       <p class="title">休闲游戏</p>
       <p class="title sub">游戏爱好者的天堂</p>
       <stackLayout direction="vertical">
-        <scroll class="scroll" :options="scroll" height="100px" width="1400px">
+        <scroll class="scroll" :options="scroll" height="100px" width="1086px">
           <stackLayout>
-            <div class="h red"/>
-            <div class="h orange"/>
-            <div class="h yellow"/>
-            <div class="h green"/>
-            <div class="h cyan"/>
-            <div class="h blue"/>
-            <div class="h purple"/>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
           </stackLayout>
         </scroll>
       </stackLayout>
@@ -152,15 +390,16 @@
       <p class="title">蠢蠢欲动的春游->_-></p>
       <p class="title sub">游戏爱好者的天堂</p>
       <stackLayout direction="vertical">
-        <scroll class="scroll" :options="scroll" height="100px" width="1400px">
+        <scroll class="scroll3" :options="scroll" height="150px" width="1648px">
           <stackLayout>
-            <div class="h red"/>
-            <div class="h orange"/>
-            <div class="h yellow"/>
-            <div class="h green"/>
-            <div class="h cyan"/>
-            <div class="h blue"/>
-            <div class="h purple"/>
+            <div class="h bg1"/>
+            <div class="h bg1"/>
+            <div class="h bg1"/>
+            <div class="h bg1"/>
+            <div class="h bg1"/>
+            <div class="h bg1"/>
+            <div class="h bg1"/>
+            <div class="h bg1"/>
           </stackLayout>
         </scroll>
       </stackLayout>
@@ -168,15 +407,134 @@
       <p class="title">书中自有颜如玉</p>
       <p class="title sub">多读书，多看报；少吃零食，多睡觉</p>
       <stackLayout direction="vertical">
-        <scroll class="scroll" :options="scroll" height="100px" width="1400px">
+        <scroll class="scroll" :options="scroll" height="100px" width="1086px">
           <stackLayout>
-            <div class="h red"/>
-            <div class="h orange"/>
-            <div class="h yellow"/>
-            <div class="h green"/>
-            <div class="h cyan"/>
-            <div class="h blue"/>
-            <div class="h purple"/>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">face</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">phone</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">android</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+            <div class="item2 waves-effect">
+              <div class="itemM2 ">
+                <i class="material-icons md-48 menuItemIcon">info</i>
+                <p>网易新闻</p>
+              </div>
+              <div class="item2Footer">
+                安装
+              </div>
+
+            </div>
+
           </stackLayout>
         </scroll>
       </stackLayout>
@@ -252,7 +610,14 @@
 
   .h {
     width: 200px;
-    height: 100px;
+    height: 150px;
+    margin-right: 6px;
+  }
+
+  .bg1{
+    background-size:200px 150px;
+    background-repeat: no-repeat;
+    background: url('https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2208189390,3240883340&fm=23&gp=0.jpg');
   }
 
   .item{
@@ -268,6 +633,45 @@
     color:white;
     font-size: 12px;
     line-height: 24px;
+  }
+
+  .item2{
+    height:100px;
+    width:85px;
+    border-radius: 2px;
+    margin-right: 6px;
+  }
+
+  .itemM2{
+    height:70px;
+    width: 100%;
+    color:black;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+
+  .item2Footer{
+    color:#2196f3;
+    border-radius: 12px;
+    border:solid 1px;
+    font-size: 12px;
+    width: 50px;
+    margin-left:17px;
+    margin-top: 6px;
+  }
+
+  .item2 p{
+    line-height: 0px;
+    color:black;
+    font-size: 12px;
+  }
+
+  .item2 i{
+
+    color:black;
+    font-size: 36px;
+    line-height: 50px;
   }
 
   .item p{
