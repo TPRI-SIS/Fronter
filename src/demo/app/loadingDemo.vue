@@ -7,7 +7,7 @@
     <div>
         <mu-flat-button icon="android" class="demo-flat-button" backgroundColor="#a4c639" color="#FFF" @click="startLoading" />
         <mu-flat-button icon="android" class="demo-flat-button" backgroundColor="#a4c639" color="#FFF" @click="addLoading" />
-       <loading :isOpen='isLoading' :value="loadingValue" :closed="handle" width="300px" color="#D61046" :size="64"  :strokeWidth="5">
+       <loading :isOpen='isLoading' :value="loadingValue" :closed="handle" width="300px" color="#00CFFD" :size="64"  :strokeWidth="5">
            <div>AAAAAAA</div>
            <div>BBBBBBB</div>
            <div>CCCCCCC</div>
