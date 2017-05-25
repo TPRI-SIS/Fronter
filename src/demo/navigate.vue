@@ -86,7 +86,10 @@ export default {
 
   mounted() {
     $ajax.ajax(
-      '',
+      {
+        method:'get',
+        url:'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=218.4.255.255'
+      },
       c => {
         console.log(c)
       },

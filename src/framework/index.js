@@ -71,7 +71,7 @@ export default {
   config: function (c) {
     for (var key in Config) {
       if (typeof(c[key]) != 'undefined')
-        Config[key] = typeof(c[key])
+        Config[key] = c[key]
     }
   },
   router: router
