@@ -5,14 +5,14 @@
     </div>
     <div class="form">
       <mu-text-field label="用戶名" labelFloat v-model="user" />
-      </br>
+      <br/>
       <mu-text-field label="密码" hintText="请输入密码" type="password" v-model="password" labelFloat/>
       <br/>
       <mu-switch label="记住我" class="demo-switch left cSwitch" labelLeft v-model="remember" />
       <br/>
       <mu-raised-button label="登录" class="demo-raised-button cButton" primary @click="login" />
     </div>
-  
+
   </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
 
 .form{
   position: absolute;
-  bottom: 48px;
+  bottom: 120px;
   left: calc(100%/2 - 130px)
 }
 

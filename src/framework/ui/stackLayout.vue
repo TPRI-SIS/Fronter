@@ -34,7 +34,7 @@ export default {
                 if (children[i].nodeName != '#text') {
                     var item = $(children[i])
                     item.addClass(this.direction)
-                    width += item.width()
+                    width += item.outerWidth(true)
                 }
             }
             this.width = width + 'px'

@@ -6,19 +6,19 @@
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width">
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000"></vueEchart>
-                 </div>                   
-                <div style="height:400px;padding:4px">
                     <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="500"></vueEchart>
+                 </div>
+                <div style="height:400px;padding:4px">
+                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000"></vueEchart>
                 </div>
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options2" isInit :delayLoad="700"></vueEchart>
+                    <vueEchart :options="options2" isInit :delayLoad="1500"></vueEchart>
                 </div>
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options3" v-on:chartclick="chartClick" isInit :delayLoad="900"></vueEchart>
+                    <vueEchart :options="options3" v-on:chartclick="chartClick" isInit :delayLoad="2000"></vueEchart>
                 </div>
                 <div style="height:400px;padding:4px">
-                    <vueEchart :options="options4" isInit :delayLoad="1100"></vueEchart>
+                    <vueEchart :options="options4" isInit :delayLoad="2500"></vueEchart>
                 </div>
             </scroll>
         </gesture>
@@ -174,7 +174,7 @@
                         formatter: "{a} <br/>{b} : {c}%"
                     },
                     legend: {
-                         bottom: 'bottom',                       
+                         bottom: 'bottom',
                         data: ['展现', '点击', '访问', '咨询', '订单']
                     },
                     calculable: true,

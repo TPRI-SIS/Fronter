@@ -1,11 +1,11 @@
 <template>
   <navLayout :open="open" :trigger="handleTrigger">
     <div slot="nav">
-      <mu-appbar title="功能列表" class="appBar">  
+      <mu-appbar title="功能列表" class="appBar">
       </mu-appbar>
       <scroll class="scroll" :style='{height:scrollHeight}' :height='(list.length+2)*48+"px"'>
         <mu-list>
-          <mu-list-item v-for="item in list" :title="item.name" class="item" @click="changeContent(item.name)">
+          <mu-list-item v-for="item in list" :title="item.name" class="item" :key="item.name" @click="changeContent(item.name)">
           </mu-list-item>
         </mu-list>
       </scroll>
@@ -14,7 +14,7 @@
       <mu-appbar :title="contentTitle" class="appBar">
         <mu-icon-button icon="arrow_back_ios" slot="left" @click='back' />
         <mu-icon-button icon="expand_more" ref="button" slot="right" @click="toggle"/>
-       
+
       </mu-appbar>
        <mu-popover :trigger="menuTrigger" :open="menuOpen" @close="handleClose">
           <mu-menu>
