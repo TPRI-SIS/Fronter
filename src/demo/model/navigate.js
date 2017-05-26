@@ -8,14 +8,6 @@ export default {
                 {
                     name: "组件生命周期",
                     router: "Sub/LifeCicle"
-                },
-                {
-                    name: "统计数据",
-                    router: "Sub/NavLayout"
-                },
-                {
-                    name: "数据查询",
-                    router: "Sub/EChartDemo"
                 }
             ]
         },
