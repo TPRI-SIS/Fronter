@@ -135,9 +135,11 @@
                 mask.css("width", expr.outerWidth() + "px");
                 var ci = expr.children('.circular');
                 ci.css("width", expr.outerWidth());
-                if (expr.height() <= 200) {
+                if (expr.outerHeight() <= 200) {
                     ci.css("top", 0);
-                } else {
+                } else if(expr.outerHeight()>=$screen.height) {
+                    ci.css("top", ($screen.height / 2) - 40);
+                }else{
                     ci.css("top", (expr.height() / 2) - 40);
                 }
                 ci.html(spinner[this.spinner])

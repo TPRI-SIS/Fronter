@@ -1,24 +1,37 @@
 <template>
     <div class="main">
-        <gesture :swipeRight="back">
-            <scroll :style="{height:scrollHeight}" height="1000px">    
-                <card class="card deepPurple" :style="{width:cardWidth}" :onRevealTrigger="triggerChart1">
-                    <div slot="title">实时负荷</div>
-                    <div slot="content">
-                        <p class="num">33MW</p>
-                    </div>
-                    <div slot="action">
-                        <mu-raised-button label="平均值" />
-                        <mu-raised-button label="最大值" />
-                    </div>
-                    <div slot="reveal" class="reveal">
-                        <loading :isOpen='isLoading' :value="loadingValue" :closed="handle" spinner="spinner02">
+        <loading :isOpen='isLoading' :value="loadingValue" :closed="handle" spinner="spinner02">
+            <gesture :swipeRight="back">
+                <scroll :style="{height:scrollHeight}" height="1000px">
+                    <card class="card deepPurple" :style="{width:cardWidth}" :onRevealTrigger="triggerChart1">
+                        <div slot="title">实时负荷</div>
+                        <div slot="content">
+                            <p class="num">33MW</p>
+                        </div>
+                        <div slot="action">
+                            <mu-raised-button label="平均值" />
+                            <mu-raised-button label="最大值" />
+                        </div>
+                        <div slot="reveal" class="reveal">
                             <vueEchart :options="options1" :isInit="chart1Init" :delayLoad="1500"></vueEchart>
-                        </loading>
-                    </div>
-                </card>
-            </scroll>
-        </gesture>
+                        </div>
+                    </card>
+                    <card class="card deepPurple" :style="{width:cardWidth}" :onRevealTrigger="triggerChart1">
+                        <div slot="title">实时负荷</div>
+                        <div slot="content">
+                            <p class="num">33MW</p>
+                        </div>
+                        <div slot="action">
+                            <mu-raised-button label="平均值" />
+                            <mu-raised-button label="最大值" />
+                        </div>
+                        <div slot="reveal" class="reveal">
+                            <vueEchart :options="options1" :isInit="chart1Init" :delayLoad="1500"></vueEchart>
+                        </div>
+                    </card>
+                </scroll>
+            </gesture>
+        </loading>
     </div>
 </template>
 
@@ -54,7 +67,7 @@
             },
             triggerChart1: function(e) {
                 if (e) {
-                    this.startLoading();
+                    //this.startLoading();
                     this.chart1Init = true;
                 }
             },
@@ -77,8 +90,7 @@
             clearInterval(this.timer)
         },
         mounted() {
-         
-            //this.startLoading();
+            this.startLoading();
         }
     }
 </script>
