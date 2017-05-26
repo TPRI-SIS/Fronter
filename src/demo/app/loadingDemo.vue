@@ -26,7 +26,7 @@
     export default {
         data() {
             return {
-                cardWidth: $screen.isPhone() ? ($screen.width - 24 + 'px') : ($screen.width / 2 - 24 + 'px'),
+                cardWidth: ($screen.width - 24 + 'px'),
                 scrollHeight: $screen.height + 'px',
                 isLoading: false,
                 loadingValue: 0,
