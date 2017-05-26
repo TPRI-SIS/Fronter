@@ -1,5 +1,6 @@
 export default{
-    ajax:'browers',
-    device:'browers',
-    localStorage:'browers'
+  ajax: 'browers',
+  device: 'browers',
+  localStorage: 'browers',
+  geo: 'browers'
 }

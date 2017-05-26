@@ -28,7 +28,6 @@
       <div class="appContent">
         <h1>{{contentTitle}}</h1>
       </div>
-      <mu-toast v-if="toast" message="一段简单的文本" />
     </div>
   </navLayout>
 </template>
@@ -69,9 +68,7 @@ export default {
       this.contentTitle = e
     },
     showToast:function(){
-      this.toast=true
-      var vm=this
-      setTimeout(() => { vm.toast = false }, 2000)
+
     },
     toggle () {
       this.menuOpen = !this.open
