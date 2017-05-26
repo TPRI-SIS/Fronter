@@ -5,21 +5,11 @@
                 <mu-flat-button label="确定" slot="right" @click="changeTitle" />
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width">
-                <div style="height:400px;padding:4px">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="500"></vueEchart>
-                 </div>
-                <div style="height:400px;padding:4px">
-                    <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000"></vueEchart>
-                </div>
-                <div style="height:400px;padding:4px">
-                    <vueEchart :options="options2" isInit :delayLoad="1500"></vueEchart>
-                </div>
-                <div style="height:400px;padding:4px">
-                    <vueEchart :options="options3" v-on:chartclick="chartClick" isInit :delayLoad="2000"></vueEchart>
-                </div>
-                <div style="height:400px;padding:4px">
-                    <vueEchart :options="options4" isInit :delayLoad="2500"></vueEchart>
-                </div>
+                <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="500" style="height:400px"></vueEchart>
+                <vueEchart :options="options2" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000" style="height:400px"></vueEchart>
+                <vueEchart :options="options2" isInit :delayLoad="1500" style="height:400px"></vueEchart>
+                <vueEchart :options="options3" v-on:chartclick="chartClick" isInit :delayLoad="2000" style="height:400px"></vueEchart>
+                <vueEchart :options="options4" isInit :delayLoad="2500" style="height:400px"></vueEchart>
             </scroll>
         </gesture>
     </div>
@@ -35,7 +25,7 @@
                     width: $screen.width + 'px',
                     height: '2000px'
                 },
-                isInitChart:false,
+                isInitChart: false,
                 contentStyle: {
                     height: $screen.height
                 },
@@ -174,7 +164,7 @@
                         formatter: "{a} <br/>{b} : {c}%"
                     },
                     legend: {
-                         bottom: 'bottom',
+                        bottom: 'bottom',
                         data: ['展现', '点击', '访问', '咨询', '订单']
                     },
                     calculable: true,
@@ -267,7 +257,7 @@
                 }
             },
             changeTitle: function() {
-                this.isInitChart=true;
+                this.isInitChart = true;
                 this.options1 = {
                     title: {
                         text: 'Vue---ECharts'
@@ -286,7 +276,6 @@
             }
         },
         mounted() {
-
         },
         activated: function() {
             console.log(3)

@@ -2,8 +2,7 @@
     .mask {
         position: absolute;
         z-index: 99999;
-        background: black;
-        opacity: .4;
+        background: rgba(0, 0, 0, 0.2);
     }
     .circular {
         position: absolute;
@@ -11,14 +10,17 @@
         z-index: 99999999999;
     }
     .main {}
-    .loadingtext{
-        color:white
+    .loadingtext {
+        color: white;
+        font-weight: bold;
     }
+   
+    
 </style>
 
 
 <template>
-    <div class="main" :style="{width:width}">
+    <div class="main" :style="{width:width,height:'100%'}">
         <transition name="mu-overlay-fade">
             <div class="mask" v-show="dialog">
             </div>
@@ -26,7 +28,6 @@
         <transition name="mu-overlay-fade">
             <div class="circular" v-show="dialog">
                 <div class="loadingtext">{{loadingText}}</div>
-                <mu-circular-progress mode="determinate" :value="value" :color="color" :size="size"  :strokeWidth="strokeWidth" :max="max" :min="min"/>
             </div>
         </transition>
         <slot>
@@ -37,6 +38,38 @@
 
 
 <script>
+    var spinner = {
+        spinner01: '<div class="fl spinner1"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>',
+        //spinner02: '<div class="fl spinner2"><div class="spinner-container container1"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container2"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container3"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div></div>',
+        spinner03: '<div class="fl spinner3"><div class="dot1"></div><div class="dot2"></div></div>',
+        spinner04: '<div class="fl spinner4"></div>',
+        spinner05: '<div class="fl spinner5"><div class="cube1"></div><div class="cube2"></div></div>',
+        spinner06: '<div class="fl spinner6"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>',
+        spinner07: `<div class="fl spinner7">
+        <div class="circ1">
+        </div>
+        <div class="circ2">
+        </div>
+        <div class="circ3">
+        </div>
+        <div class="circ4">
+        </div>
+        </div>`,
+        spinner02: `<div class="sk-circle">
+                        <div class="sk-circle1 sk-child"></div>
+                        <div class="sk-circle2 sk-child"></div>
+                        <div class="sk-circle3 sk-child"></div>
+                        <div class="sk-circle4 sk-child"></div>
+                        <div class="sk-circle5 sk-child"></div>
+                        <div class="sk-circle6 sk-child"></div>
+                        <div class="sk-circle7 sk-child"></div>
+                        <div class="sk-circle8 sk-child"></div>
+                        <div class="sk-circle9 sk-child"></div>
+                        <div class="sk-circle10 sk-child"></div>
+                        <div class="sk-circle11 sk-child"></div>
+                        <div class="sk-circle12 sk-child"></div>
+                    </div>`
+    }
     export default {
         name: 'loading',
         data() {
@@ -60,32 +93,18 @@
             closed: {
                 type: Function
             },
-            loadingText:{
+            loadingText: {
                 type: String,
-                default: '正在加载,请稍后....'
+                default: 'Loading.......'
             },
-            max: {
-                type: Number,
-                default: 100
-            },
-            min: {
-                type: Number,
-                default: 0
-            },
-            color: {
-                type: String
-            },
-            size: {
-                type: Number,
-                default: 24
-            },
-            strokeWidth: {
-                type: Number,
-                default: 3
+            spinner: {
+                type: String,
+                default: 'spinner02'
             }
         },
         watch: {
             isOpen: function(value) {
+                  console.log(this.open)
                 this.open = value
             },
             value: function(value) {
@@ -99,18 +118,31 @@
         },
         computed: {
             dialog: function() {
+               console.log(this.open)
+                if (this.open) {
+                     
+                    this.showMask();
+                }
                 return this.open
             }
         },
-        methods: {},
-        mounted() {
-            var expr = $(this.$el);
-            var mask = expr.children('.mask');
-            mask.css("height", expr.height());
-            mask.css("width", expr.width());
-            var ci = expr.children('.circular');
-            ci.css("width", expr.width());
-            ci.css("top", expr.height() / 2);
-        }
+        methods: {
+            showMask() {
+                var expr = $(this.$el);
+                console.log(expr)
+                var mask = expr.children('.mask');
+                mask.css("height", expr.outerHeight() + "px");
+                mask.css("width", expr.outerWidth() + "px");
+                var ci = expr.children('.circular');
+                ci.css("width", expr.outerWidth());
+                if (expr.height() <= 200) {
+                    ci.css("top", 0);
+                } else {
+                    ci.css("top", (expr.height() / 2) - 40);
+                }
+                ci.html(spinner[this.spinner])
+            }
+        },
+        mounted() {}
     }
 </script>
