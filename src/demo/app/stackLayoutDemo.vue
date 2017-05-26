@@ -3,7 +3,7 @@
 
     <mu-tabs class="tabs mu-paper-0" :value="activeTab" Default @change="handleTabChange">
       <mu-tab value="tab1" class="tabItem" title="应用"/>
-      <mu-tab value="tab2" class="tabItem" title="游戏"/>
+      <mu-tab value="tab2" class="tabItem" title="游戏" @click="test"/>
       <mu-tab value="tab3" class="tabItem" title="排行"/>
       <mu-tab value="tab4" class="tabItem" title="分类"/>
       <mu-tab value="tab5" class="tabItem" title="专享"/>
@@ -19,7 +19,7 @@
         <p class="title sub">想要的都在这里</p>
         </div>
 
-        <scroll class="scroll" :options="scroll" height="100px" width="1086px">
+        <scroll class="scroll" :options="scroll" height="100px" :width="tt">
           <stackLayout>
             <div class="item green waves-effect">
               <div class="itemM green2">
@@ -560,13 +560,17 @@
         scroll2: {
           scrollX: false,
           scrollY: true
-        }
+        },
+        tt:'1092px'
       }
     },
     methods: {
       handleTabChange (val) {
         this.activeTab = val
       },
+      test(){
+        this.tt='2500px'
+      }
     }
   }
 </script>
