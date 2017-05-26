@@ -40,13 +40,14 @@ export default {
             this.width = width + 'px'
         } else {
             var children = this.$el.childNodes
+
             var height = 0;
             this.width = $(children[0]).width() + 'px'
             for (var i = 0; i < children.length; i++) {
                 if (children[i].nodeName != '#text') {
                     var item = $(children[i])
                     item.addClass(this.direction)
-                    height += item.height()
+                    height += item.outerHeight()
                 }
             }
             this.height = height + 'px'
