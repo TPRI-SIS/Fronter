@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Nav from './navigate'
 import Login from './login'
 import LifeCicle from './app/lifeCicle'
-import DataStaticBaseData from './app/dataStaticBaseData'
 import EChartDemo from './app/eChartDemo'
 import NavLayoutDemo from './app/navLayoutDemo'
 import CollectionLayoutDemo from './app/collectionLayoutDemo'
@@ -11,6 +10,7 @@ import StackLayoutDemo from './app/stackLayoutDemo'
 import PageLayoutDemo from './app/pageLayoutDemo'
 import CardDemo from './app/CardDemo'
 import LoadingDemo from './app/loadingDemo'
+import  ScrollExDemo from './app/scrollExDemo'
 
 Vue.use(Router)
 
@@ -25,13 +25,13 @@ export default new Router({
       path: '/Nav',
       name: 'Nav',
       component: Nav,
-      meta: { requiresAuth: true }
+      meta: {requiresAuth: true}
     },
     {
       path: '/Sub/LifeCicle',
       name: 'LifeCicle',
       component: LifeCicle,
-      meta: { requiresAuth: true }
+      meta: {requiresAuth: true}
     },
     {
 
@@ -44,7 +44,7 @@ export default new Router({
       name: 'NavLayoutDemo',
       component: NavLayoutDemo,
 
-      meta: { requiresAuth: true }
+      meta: {requiresAuth: true}
     },
     {
       path: '/Sub/CollectionLayoutDemo',
@@ -57,7 +57,7 @@ export default new Router({
       component: StackLayoutDemo,
 
 
-      meta: { requiresAuth: true }
+      meta: {requiresAuth: true}
     },
     {
       path: '/Sub/PageLayoutDemo',
@@ -65,7 +65,7 @@ export default new Router({
       component: PageLayoutDemo,
 
 
-      meta: { requiresAuth: true }
+      meta: {requiresAuth: true}
     }
     ,
     {
@@ -74,16 +74,25 @@ export default new Router({
       component: CardDemo,
 
 
-      meta: { requiresAuth: true }
+      meta: {requiresAuth: true}
     }
-     ,
+    ,
     {
       path: '/Sub/LoadingDemo',
       name: 'LoadingDemo',
       component: LoadingDemo,
 
 
-      meta: { requiresAuth: true }
-    }   
+      meta: {requiresAuth: true}
+    }
+    ,
+    {
+      path: '/Sub/ScrollExDemo',
+      name: 'ScrollExDemo',
+      component: ScrollExDemo,
+
+
+      meta: {requiresAuth: true}
+    }
   ]
 })

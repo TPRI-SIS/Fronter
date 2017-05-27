@@ -14,8 +14,8 @@
         color: white;
         font-weight: bold;
     }
-   
-    
+
+
 </style>
 
 
@@ -39,7 +39,7 @@
 
 <script>
     var spinner = {
-        spinner01: '<div class="fl spinner1"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>',
+          spinner01: '<div class="fl spinner1"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>',
         //spinner02: '<div class="fl spinner2"><div class="spinner-container container1"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container2"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container3"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div></div>',
         spinner03: '<div class="fl spinner3"><div class="dot1"></div><div class="dot2"></div></div>',
         spinner04: '<div class="fl spinner4"></div>',
@@ -120,7 +120,7 @@
             dialog: function() {
                console.log(this.open)
                 if (this.open) {
-                     
+
                     this.showMask();
                 }
                 return this.open

@@ -22,15 +22,7 @@
   import IScroll from 'iscroll'
 
 
-  var option = {
-    mouseWheel: true,
-    click: true,
-    preventDefault: false,
-    tap: true,
-    bounce: true,
-    disableTouch: false,
-    checkDOMChanges: true
-  }
+
 
   export default {
     name: 'scroll',
@@ -62,24 +54,20 @@
       this.scroll.refresh()
     },
 
-    watch: {
-      width: {
-        handler(width) {
-          var inner = $(this.$el).children().children()
-          inner.css('width', width )
-        }
-      },
-      height: {
-        handler(height) {
-          var inner = $(this.$el).children().children()
-          inner.css('height', height)
-        }
-      }
-    },
 
     mounted() {
-      option.scrollX = this.options.scrollX
-      option.scrollY = this.options.scrollY
+      var option = {
+        mouseWheel: true,
+        click: true,
+        preventDefault: false,
+        tap: true,
+        bounce: true,
+        disableTouch: false,
+        checkDOMChanges: true,
+        scrollX:this.options.scrollX,
+        scrollY:this.options.scrollY
+      }
+
       if (!$screen.isPC()) {
 
           this.scroll = new IScroll(this.$el, option)

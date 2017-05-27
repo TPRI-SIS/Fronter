@@ -15,6 +15,7 @@ import NavLayout from './ui/NavLayout'
 import StackLayout from './ui/stackLayout'
 import PageLayout from './ui/pageLayout'
 import Scroll from './ui/scroll'
+import ScrollEx from './ui/scrollEx'
 
 import Config from './apiDefine/config'
 
@@ -41,6 +42,7 @@ const components = {
   StackLayout,
   PageLayout,
   Scroll,
+  ScrollEx,
   Gesture,
   VueEchart,
   CollectionLayout,
