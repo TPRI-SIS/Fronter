@@ -2,33 +2,27 @@
 
 module.exports = {
   ajax: function (params, successCallBack, errorCallBack) {
-    var axios = require('axios')
-
+    ///var axios = require('axios')
     if (params.method == 'get') {
-      axios.get(params.url)
-        .then(
+      $.get(params.url)
+        .done(
           r => {
-            console.log(r)
             successCallBack(r)
           })
-        .catch(
+        .fail(
           e => {
-            console.log(e)
             errorCallBack(e)
           }
         )
     }
     else {
-
-      axios.post(params.url,params.param)
-        .then(
+      $.post(params.url,params.param)
+        .done(
           r => {
-            console.log(r)
             successCallBack(r)
           })
-        .catch(
+        .fail(
           e => {
-            console.log(e)
             errorCallBack(e)
           }
         )

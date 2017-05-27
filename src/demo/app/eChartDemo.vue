@@ -2,9 +2,25 @@
     <div class="main">
         <gesture :swipeRight="swipeRight">
             <mu-appbar title="Title" class="appbar">
-                <mu-flat-button label="确定" slot="right" @click="changeTitle" />
+                <mu-flat-button label="确定" slot="right" @click="getTableDatas" />
             </mu-appbar>
             <scroll :options='scrollOptions' :style="{height:scrollHeight}" class="content" :width="scrollStyle.width">
+                <mu-table fixedHeader height="500px" enableSelectAll multiSelectable selectable showCheckbox>
+                    <mu-thead slot="header">
+                        <mu-tr>
+                            <mu-th tooltip="Tagname">标签名称</mu-th>
+                            <mu-th tooltip="TimeStamp">时间戳</mu-th>
+                            <mu-th tooltip="Value">实时值</mu-th>
+                        </mu-tr>
+                    </mu-thead>
+                    <mu-tbody>
+                        <mu-tr v-for="item,index in tableList" :key="index" selected>
+                            <mu-td>{{item.Tagname}}</mu-td>
+                            <mu-td>{{item.TimeStamp}}</mu-td>
+                            <mu-td>{{item.Value}}</mu-td>
+                        </mu-tr>
+                    </mu-tbody>
+                </mu-table>
                 <vueEchart :options="options1" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="500" style="height:400px"></vueEchart>
                 <vueEchart :options="options2" v-on:chartclick="chartClick" auto-resize isInit :delayLoad="1000" style="height:400px"></vueEchart>
                 <vueEchart :options="options2" isInit :delayLoad="1500" style="height:400px"></vueEchart>
@@ -234,7 +250,8 @@
                 },
                 swipeRight: function(e) {
                     this.$router.go(-1)
-                }
+                },
+                tableList: []
             }
         },
         methods: {
@@ -273,9 +290,51 @@
                         data: [5, 20, 36, 10, 10, 20, 50]
                     }]
                 }
+            },
+            getTableDatas: function() {
+                var vm = this;
+                var ip = "30.30.30.214";
+                var tagNames = "DWF1.UT.N001US_I_GA,DWF1.UT.N001US_V_GA,DWF1.UT.N001US_W_400V";
+                var params = {
+                    '': 'rtdb/snapshorts?tagNames=' + tagNames
+                };
+                var url = "http://" + ip + "/master/api/biz/test/?";
+                $ajax.ajax({
+                        method: 'post',
+                        url: url,
+                        param: params
+                    },
+                    result => {
+                        var ajaxObj = JSON.parse(result);
+                        console.log(ajaxObj.Result)
+                        if (ajaxObj.IsValid) {
+                            vm.tableList = JSON.parse(ajaxObj.Result)
+                        } else {
+                            //出现异常错误
+                            console.log(ajaxObj);
+                        }
+                    },
+                    xhr => {
+                        console.log("error.status:" + xhr.status);
+                    }
+                )
+                $ajax.ajax({
+                        method: 'get',
+                        url: 'http://30.30.30.42:8088/api/music/search?keyword=%E6%9C%80%E7%BE%8E'
+                    },
+                    result => {
+
+                            console.log(result);
+
+                    },
+                    xhr => {
+                        console.log("error.status:" + xhr.status);
+                    }
+                )
             }
         },
         mounted() {
+            this.getTableDatas();
         },
         activated: function() {
             console.log(3)
