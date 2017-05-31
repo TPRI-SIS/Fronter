@@ -40,7 +40,12 @@ export default {
         {
           name: "page布局",
           router: "Sub/PageLayoutDemo"
+        },
+        {
+          name:'grid布局',
+          router:'Sub/GridLayoutDemo'
         }
+
       ]
     },
     {

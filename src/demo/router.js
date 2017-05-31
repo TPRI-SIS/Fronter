@@ -11,6 +11,7 @@ import PageLayoutDemo from './app/pageLayoutDemo'
 import CardDemo from './app/CardDemo'
 import LoadingDemo from './app/loadingDemo'
 import  ScrollExDemo from './app/scrollExDemo'
+import GridLayoutDemo from './app/gridLayoutDemo.vue'
 
 Vue.use(Router)
 
@@ -90,6 +91,15 @@ export default new Router({
       path: '/Sub/ScrollExDemo',
       name: 'ScrollExDemo',
       component: ScrollExDemo,
+
+
+      meta: {requiresAuth: true}
+    },
+
+    {
+      path: '/Sub/GridLayoutDemo',
+      name: 'GridLayoutDemo',
+      component: GridLayoutDemo,
 
 
       meta: {requiresAuth: true}
